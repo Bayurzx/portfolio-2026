@@ -1,0 +1,124 @@
+{
+    "id": "certifications_17",
+    "name": "Certifications",
+    "triggers": [
+        "certifications",
+        "certificates",
+        "certified",
+        "credentials"
+    ],
+    "keywords": [
+        "certification",
+        "certificate",
+        "certified",
+        "badge",
+        "credential"
+    ],
+    "response": {
+        "text": "I'm a big believer in continuous learning, and certifications help validate my expertise. I hold multiple Tier-1 certifications from Microsoft, Google Cloud, and other platforms. Highlights include Microsoft Certified DevOps Engineer Expert, Azure AI Engineer Expert, GCP Professional Cloud Architect, and Professional Cloud Security Engineer. Check out my full list!",
+        "voiceText": "I hold certifications from Microsoft Azure, Google Cloud, and more. Highlights include DevOps Engineer Expert, AI Engineer Expert, and GCP Cloud Architect.",
+        "animationStyle": "professional",
+        "cards": [
+            {
+                "type": "certs",
+                "data": {
+                    "title": "Tier 1 - Career-Defining Certifications",
+                    "certs": [
+                        {
+                            "name": "DevOps Engineer Expert",
+                            "issuer": "Microsoft",
+                            "image": "/images/certs/AZ_400.jpg",
+                            "date": "2023",
+                            "url": "https://learn.microsoft.com/en-us/users/adebayoomolumo-0432/credentials/f0e5f4fccebae235"
+                        },
+                        {
+                            "name": "Azure AI Engineer",
+                            "issuer": "Microsoft",
+                            "image": "/images/certs/AZ_102.png",
+                            "date": "2023",
+                            "url": "https://learn.microsoft.com/en-us/users/adebayoomolumo-0432/credentials/4c35bff015f21cc6"
+                        },
+                        {
+                            "name": "Azure Developer Associate",
+                            "issuer": "Microsoft",
+                            "image": "/images/certs/AZ_204.jpg",
+                            "date": "2022",
+                            "url": "https://learn.microsoft.com/en-us/users/adebayoomolumo-0432/credentials/4b4aa757538b104c"
+                        },
+                        {
+                            "name": "Azure Administrator Associate",
+                            "issuer": "Microsoft",
+                            "image": "/images/certs/AZ_104.jpg",
+                            "date": "2022",
+                            "url": "https://learn.microsoft.com/en-us/users/adebayoomolumo-0432/credentials/2c1f5b2367c709e9"
+                        },
+                        {
+                            "name": "Azure Fundamentals",
+                            "issuer": "Microsoft",
+                            "image": "/images/certs/AZ_900.jpg",
+                            "date": "2021"
+                        },
+                        {
+                            "name": "Professional Cloud Architect",
+                            "issuer": "Google Cloud",
+                            "image": "/images/certs/GCP_Architect.jpg",
+                            "date": "2022",
+                            "url": "https://www.credly.com/badges/f2a46f23-17f7-4619-8db8-80ae2428167b"
+                        },
+                        {
+                            "name": "Professional Cloud Security Engineer",
+                            "issuer": "Google Cloud",
+                            "image": "/images/certs/professional-cloud-security-engineer-badge.png",
+                            "date": "2024",
+                            "url": "https://www.credly.com/badges/2d98b89f-49ce-40aa-8553-9ba02f718f96"
+                        },
+                        {
+                            "name": "Associate Cloud Engineer",
+                            "issuer": "Google Cloud",
+                            "image": "/images/certs/GCP_ACE.jpg",
+                            "date": "2021",
+                            "url": "https://www.credly.com/badges/bacc465e-2603-48ad-824a-94e86568b2d7"
+                        },
+                        {
+                            "name": "Multi-Cloud Network Associate",
+                            "issuer": "Aviatrix",
+                            "image": "/images/certs/aviatrix.jpg",
+                            "date": "2023"
+                        },
+                        {
+                            "name": "Cloud DevOps Engineer",
+                            "issuer": "Udacity",
+                            "image": "/images/certs/Udacity_Cloud_DevOps.jpg",
+                            "date": "2021"
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "stats",
+                "data": {
+                    "stats": [
+                        {
+                            "label": "Total Certs",
+                            "value": 10,
+                            "suffix": "+"
+                        },
+                        {
+                            "label": "Cloud Platforms",
+                            "value": 3
+                        },
+                        {
+                            "label": "Active",
+                            "value": 7
+                        }
+                    ]
+                }
+            }
+        ],
+        "suggestions": [
+            "Which cloud do you prefer?",
+            "Tell me about Kubernetes",
+            "What's your tech stack?"
+        ]
+    }
+}

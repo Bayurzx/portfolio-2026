@@ -1,0 +1,90 @@
+{
+    "id": "stay_updated_22",
+    "name": "Stay Updated",
+    "triggers": [
+        "stay updated",
+        "how do you learn",
+        "keep up with tech",
+        "learning method"
+    ],
+    "keywords": [
+        "learn",
+        "updated",
+        "news",
+        "learning",
+        "podcast"
+    ],
+    "response": {
+        "text": "I'm constantly learning across all areas of tech—not just DevOps! Hackathon challenges are my favorite way to dive deep into new technologies under pressure. I also stay updated through YouTube tutorials, Substack newsletters from industry experts, and hands-on building. I follow DevOps Weekly, KubeWeekly, and tech creators on YouTube. Theory is great, but nothing beats shipping code!",
+        "voiceText": "I stay updated through hackathon challenges, YouTube tutorials, Substack newsletters, and hands-on building with new technologies.",
+        "animationStyle": "professional",
+        "cards": [
+            {
+                "type": "skills",
+                "data": {
+                    "title": "Learning Resources",
+                    "categories": [
+                        {
+                            "name": "Hands-On Learning",
+                            "skills": [
+                                {
+                                    "name": "Hackathon Challenges"
+                                },
+                                {
+                                    "name": "Side Projects"
+                                },
+                                {
+                                    "name": "Open Source"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Video & Articles",
+                            "skills": [
+                                {
+                                    "name": "YouTube Tutorials"
+                                },
+                                {
+                                    "name": "Substack"
+                                },
+                                {
+                                    "name": "Tech Blogs"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Newsletters",
+                            "skills": [
+                                {
+                                    "name": "DevOps Weekly"
+                                },
+                                {
+                                    "name": "KubeWeekly"
+                                },
+                                {
+                                    "name": "TLDR DevOps"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Communities",
+                            "skills": [
+                                {
+                                    "name": "Cloud-Native Slack"
+                                },
+                                {
+                                    "name": "CNCF Discord"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ],
+        "suggestions": [
+            "What motivates you?",
+            "What are your future goals?",
+            "Why so many hackathons?"
+        ]
+    }
+}

@@ -1,0 +1,60 @@
+{
+    "id": "current_project_15",
+    "name": "Current Project",
+    "triggers": [
+        "current project",
+        "working on now",
+        "what are you building",
+        "latest project"
+    ],
+    "keywords": [
+        "current",
+        "working",
+        "now",
+        "building",
+        "latest"
+    ],
+    "response": {
+        "text": "Right now I'm focused on two exciting things! At Infometics, I'm leading the Kubernetes infrastructure for UBA Group. On the side, I'm building THIS portfolio you're looking at—an AI-powered interactive experience that showcases my work in a unique way. I'm also continuously enhancing Synapse with new ML features.",
+        "voiceText": "Right now I'm leading Kubernetes infrastructure for UBA Group and building this AI-powered portfolio you're looking at!",
+        "animationStyle": "professional",
+        "cards": [
+            {
+                "type": "project",
+                "data": {
+                    "title": "AI Interactive Portfolio",
+                    "description": "The website you're using right now! An AI-powered interactive portfolio with scenario-based conversations, dynamic cards, and voice capabilities.",
+                    "techStack": [
+                        "Next.js",
+                        "TypeScript",
+                        "Framer Motion",
+                        "FastAPI",
+                        "Gemini API",
+                        "Edge TTS"
+                    ],
+                    "featured": true
+                }
+            },
+            {
+                "type": "project",
+                "data": {
+                    "title": "UBA K8s Infrastructure",
+                    "description": "Production-grade Kubernetes cluster for Africa's largest bank. Secure, highly available, cloud-native.",
+                    "techStack": [
+                        "AWS",
+                        "Kubernetes",
+                        "Terraform",
+                        "Calico",
+                        "Velero"
+                    ],
+                    "featured": true
+                }
+            }
+        ],
+        "suggestions": [
+            "Tell me about Synapse",
+            "What's your tech stack?",
+            "How can I contact you?"
+        ]
+    }
+}

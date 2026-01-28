@@ -1,0 +1,301 @@
+<svg viewBox="0 0 1600 1200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1600" height="1200" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="800" y="40" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#1a1a1a">
+    Staging/Production Kubernetes Architecture - Air-Gapped Data Center
+  </text>
+  <text x="800" y="70" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#666">
+    Scheduler-Managed Workload Distribution with High Availability
+  </text>
+  
+  <!-- Legend -->
+  <g id="legend" transform="translate(1300, 100)">
+    <rect x="0" y="0" width="280" height="240" fill="white" stroke="#ddd" stroke-width="1" rx="5"/>
+    <text x="140" y="25" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Legend</text>
+    
+    <rect x="15" y="40" width="30" height="20" fill="#e3f2fd" stroke="#2196f3" stroke-width="2"/>
+    <text x="55" y="55" font-family="Arial, sans-serif" font-size="12">Master Node (Tainted)</text>
+    
+    <rect x="15" y="70" width="30" height="20" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
+    <text x="55" y="85" font-family="Arial, sans-serif" font-size="12">Worker Node Pool</text>
+    
+    <rect x="15" y="100" width="30" height="20" fill="#e8f5e9" stroke="#4caf50" stroke-width="2"/>
+    <text x="55" y="115" font-family="Arial, sans-serif" font-size="12">DaemonSet (All Nodes)</text>
+    
+    <rect x="15" y="130" width="30" height="20" fill="#fff3e0" stroke="#ff9800" stroke-width="2"/>
+    <text x="55" y="145" font-family="Arial, sans-serif" font-size="12">Scheduled Workload</text>
+    
+    <rect x="15" y="160" width="30" height="20" fill="#fce4ec" stroke="#e91e63" stroke-width="2"/>
+    <text x="55" y="175" font-family="Arial, sans-serif" font-size="12">System Services</text>
+    
+    <circle cx="30" cy="200" r="8" fill="#ffeb3b" stroke="#f57c00" stroke-width="2"/>
+    <text x="55" y="205" font-family="Arial, sans-serif" font-size="12">Pod (Scheduler Placed)</text>
+  </g>
+  
+  <!-- Air-Gapped Boundary -->
+  <rect x="50" y="100" width="1200" height="1050" fill="none" stroke="#d32f2f" stroke-width="3" stroke-dasharray="10,5" rx="10"/>
+  <text x="650" y="95" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#d32f2f" text-anchor="middle">Air-Gapped Data Center - No Internet Connectivity</text>
+  
+  <!-- Network Segments -->
+  <g id="network-segments">
+    <!-- Management Network -->
+    <rect x="70" y="120" width="1160" height="60" fill="#e1f5fe" stroke="#0288d1" stroke-width="2" rx="5" stroke-dasharray="5,3"/>
+    <text x="90" y="145" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#0288d1">Management Network (VLAN 100)</text>
+    <text x="90" y="165" font-family="Arial, sans-serif" font-size="10" fill="#666">GitOps Sync • Admin Access • External Load Balancer</text>
+    
+    <!-- Cluster Network -->
+    <rect x="70" y="190" width="1160" height="930" fill="none" stroke="#388e3c" stroke-width="2" rx="5" stroke-dasharray="5,3"/>
+    <text x="90" y="215" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#388e3c">Cluster Network (VLAN 200) - 10.100.0.0/16</text>
+    <text x="90" y="235" font-family="Arial, sans-serif" font-size="10" fill="#666">Pod-to-Pod Communication • Calico IPIP Overlay • Unrestricted Between All Nodes</text>
+  </g>
+  
+  <!-- Control Plane HA Setup -->
+  <g id="control-plane">
+    <text x="650" y="270" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Control Plane - High Availability (Tainted: NoSchedule)</text>
+    
+    <!-- Virtual IP -->
+    <rect x="550" y="290" width="200" height="40" fill="#ffebee" stroke="#c62828" stroke-width="2" rx="5"/>
+    <text x="650" y="315" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">kube-vip: 10.100.0.10</text>
+    
+    <!-- Master Nodes -->
+    <g id="master-1">
+      <rect x="320" y="350" width="180" height="120" fill="#e3f2fd" stroke="#2196f3" stroke-width="2" rx="5"/>
+      <text x="410" y="375" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Master-1 (RHEL 9)</text>
+      <text x="410" y="395" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">10.100.0.11</text>
+      <text x="330" y="415" font-family="Arial, sans-serif" font-size="9">• etcd member</text>
+      <text x="330" y="430" font-family="Arial, sans-serif" font-size="9">• kube-apiserver</text>
+      <text x="330" y="445" font-family="Arial, sans-serif" font-size="9">• kube-controller</text>
+      <text x="330" y="460" font-family="Arial, sans-serif" font-size="9">• kube-scheduler</text>
+    </g>
+    
+    <g id="master-2">
+      <rect x="520" y="350" width="180" height="120" fill="#e3f2fd" stroke="#2196f3" stroke-width="2" rx="5"/>
+      <text x="610" y="375" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Master-2 (RHEL 9)</text>
+      <text x="610" y="395" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">10.100.0.12</text>
+      <text x="530" y="415" font-family="Arial, sans-serif" font-size="9">• etcd member</text>
+      <text x="530" y="430" font-family="Arial, sans-serif" font-size="9">• kube-apiserver</text>
+      <text x="530" y="445" font-family="Arial, sans-serif" font-size="9">• kube-controller</text>
+      <text x="530" y="460" font-family="Arial, sans-serif" font-size="9">• kube-scheduler</text>
+    </g>
+    
+    <g id="master-3">
+      <rect x="720" y="350" width="180" height="120" fill="#e3f2fd" stroke="#2196f3" stroke-width="2" rx="5"/>
+      <text x="810" y="375" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Master-3 (RHEL 9)</text>
+      <text x="810" y="395" font-family="Arial, sans-serif" font-size="10" text-anchor="middle">10.100.0.13</text>
+      <text x="730" y="415" font-family="Arial, sans-serif" font-size="9">• etcd member</text>
+      <text x="730" y="430" font-family="Arial, sans-serif" font-size="9">• kube-apiserver</text>
+      <text x="730" y="445" font-family="Arial, sans-serif" font-size="9">• kube-controller</text>
+      <text x="730" y="460" font-family="Arial, sans-serif" font-size="9">• kube-scheduler</text>
+    </g>
+    
+    <!-- etcd cluster indication -->
+    <path d="M410 350 L610 350 L810 350" fill="none" stroke="#1976d2" stroke-width="2" stroke-dasharray="3,3"/>
+    <text x="610" y="345" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#1976d2">etcd quorum</text>
+  </g>
+  
+  <!-- Worker Pool -->
+  <g id="worker-pool">
+    <text x="650" y="510" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Worker Node Pool - Unified Resource Pool (Cattle, Not Pets)</text>
+    
+    <!-- Worker Node Pool Container -->
+    <rect x="100" y="530" width="1100" height="560" fill="#f3e5f5" fill-opacity="0.3" stroke="#9c27b0" stroke-width="3" rx="10" stroke-dasharray="8,4"/>
+    <text x="650" y="555" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#9c27b0">Kubernetes Scheduler Manages All Workload Placement</text>
+    
+    <!-- Individual Worker Nodes -->
+    <g id="worker-1">
+      <rect x="120" y="580" width="340" height="480" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2" rx="5"/>
+      <rect x="130" y="590" width="320" height="40" fill="#e1bee7" rx="3"/>
+      <text x="290" y="615" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Worker-1 (RHEL 9) - 10.100.0.21</text>
+      <text x="290" y="630" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#666">32 vCPU • 64GB RAM • 250GB Storage</text>
+      
+      <!-- DaemonSets (Always Present) -->
+      <rect x="140" y="650" width="300" height="80" fill="#e8f5e9" stroke="#4caf50" stroke-width="2" rx="3"/>
+      <text x="290" y="670" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">DaemonSets (Always Present)</text>
+      <text x="150" y="690" font-family="Arial, sans-serif" font-size="9">• Longhorn Manager &amp; Engine</text>
+      <text x="150" y="705" font-family="Arial, sans-serif" font-size="9">• NGINX Ingress Controller</text>
+      <text x="150" y="720" font-family="Arial, sans-serif" font-size="9">• Calico Node • kube-proxy • kubelet</text>
+      
+      <!-- Example Scheduled Pods -->
+      <text x="290" y="755" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#666">Example Scheduler Placement:</text>
+      
+      <g transform="translate(160, 770)">
+        <circle cx="15" cy="15" r="12" fill="#ffeb3b" stroke="#f57c00" stroke-width="2"/>
+        <text x="35" y="20" font-family="Arial, sans-serif" font-size="9">mq-queuemanager-0</text>
+      </g>
+      
+      <g transform="translate(160, 810)">
+        <circle cx="15" cy="15" r="12" fill="#ffeb3b" stroke="#f57c00" stroke-width="2"/>
+        <text x="35" y="20" font-family="Arial, sans-serif" font-size="9">ace-integration-server-0</text>
+      </g>
+      
+      <g transform="translate(160, 850)">
+        <circle cx="15" cy="15" r="12" fill="#ffeb3b" stroke="#f57c00" stroke-width="2"/>
+        <text x="35" y="20" font-family="Arial, sans-serif" font-size="9">prometheus-0</text>
+      </g>
+      
+      <g transform="translate(160, 890)">
+        <circle cx="15" cy="15" r="12" fill="#ffeb3b" stroke="#f57c00" stroke-width="2"/>
+        <text x="35" y="20" font-family="Arial, sans-serif" font-size="9">cert-manager-7bc4d5</text>
+      </g>
+      
+      <!-- Resource Usage -->
+      <rect x="140" y="940" width="300" height="100" fill="#fff" stroke="#666" stroke-width="1" rx="3"/>
+      <text x="290" y="960" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">Resource Utilization</text>
+      <rect x="160" y="970" width="200" height="15" fill="#e0e0e0" rx="2"/>
+      <rect x="160" y="970" width="120" height="15" fill="#4caf50" rx="2"/>
+      <text x="370" y="982" font-family="Arial, sans-serif" font-size="9">CPU: 60%</text>
+      
+      <rect x="160" y="990" width="200" height="15" fill="#e0e0e0" rx="2"/>
+      <rect x="160" y="990" width="140" height="15" fill="#2196f3" rx="2"/>
+      <text x="370" y="1002" font-family="Arial, sans-serif" font-size="9">Memory: 70%</text>
+      
+      <rect x="160" y="1010" width="200" height="15" fill="#e0e0e0" rx="2"/>
+      <rect x="160" y="1010" width="80" height="15" fill="#ff9800" rx="2"/>
+      <text x="370" y="1022" font-family="Arial, sans-serif" font-size="9">Storage: 40%</text>
+    </g>
+    
+    <g id="worker-2">
+      <rect x="480" y="580" width="340" height="480" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2" rx="5"/>
+      <rect x="490" y="590" width="320" height="40" fill="#e1bee7" rx="3"/>
+      <text x="650" y="615" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Worker-2 (RHEL 9) - 10.100.0.22</text>
+      <text x="650" y="630" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#666">32 vCPU • 64GB RAM • 250GB Storage</text>
+      
+      <!-- DaemonSets -->
+      <rect x="500" y="650" width="300" height="80" fill="#e8f5e9" stroke="#4caf50" stroke-width="2" rx="3"/>
+      <text x="650" y="670" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">DaemonSets (Always Present)</text>
+      <text x="510" y="690" font-family="Arial, sans-serif" font-size="9">• Longhorn Manager &amp; Engine</text>
+      <text x="510" y="705" font-family="Arial, sans-serif" font-size="9">• NGINX Ingress Controller</text>
+      <text x="510" y="720" font-family="Arial, sans-serif" font-size="9">• Calico Node • kube-proxy • kubelet</text>
+      
+      <!-- Scheduled Pods -->
+      <text x="650" y="755" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#666">Example Scheduler Placement:</text>
+      
+      <g transform="translate(520, 770)">
+        <circle cx="15" cy="15" r="12" fill="#ffeb3b" stroke="#f57c00" stroke-width="2"/>
+        <text x="35" y="20" font-family="Arial, sans-serif" font-size="9">ace-integration-server-1</text>
+        <text x="35" y="32" font-family="Arial, sans-serif" font-size="8" fill="#666">(Anti-affinity from ace-0)</text>
+      </g>
+      
+      <g transform="translate(520, 820)">
+        <circle cx="15" cy="15" r="12" fill="#ffeb3b" stroke="#f57c00" stroke-width="2"/>
+        <text x="35" y="20" font-family="Arial, sans-serif" font-size="9">harbor-registry-0</text>
+      </g>
+      
+      <g transform="translate(520, 860)">
+        <circle cx="15" cy="15" r="12" fill="#ffeb3b" stroke="#f57c00" stroke-width="2"/>
+        <text x="35" y="20" font-family="Arial, sans-serif" font-size="9">gitea-0</text>
+      </g>
+      
+      <g transform="translate(520, 900)">
+        <circle cx="15" cy="15" r="12" fill="#ffeb3b" stroke="#f57c00" stroke-width="2"/>
+        <text x="35" y="20" font-family="Arial, sans-serif" font-size="9">fluxcd-controller-8xk2p</text>
+      </g>
+      
+      <!-- Resource Usage -->
+      <rect x="500" y="940" width="300" height="100" fill="#fff" stroke="#666" stroke-width="1" rx="3"/>
+      <text x="650" y="960" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">Resource Utilization</text>
+      <rect x="520" y="970" width="200" height="15" fill="#e0e0e0" rx="2"/>
+      <rect x="520" y="970" width="100" height="15" fill="#4caf50" rx="2"/>
+      <text x="730" y="982" font-family="Arial, sans-serif" font-size="9">CPU: 50%</text>
+      
+      <rect x="520" y="990" width="200" height="15" fill="#e0e0e0" rx="2"/>
+      <rect x="520" y="990" width="160" height="15" fill="#2196f3" rx="2"/>
+      <text x="730" y="1002" font-family="Arial, sans-serif" font-size="9">Memory: 80%</text>
+      
+      <rect x="520" y="1010" width="200" height="15" fill="#e0e0e0" rx="2"/>
+      <rect x="520" y="1010" width="100" height="15" fill="#ff9800" rx="2"/>
+      <text x="730" y="1022" font-family="Arial, sans-serif" font-size="9">Storage: 50%</text>
+    </g>
+    
+    <g id="worker-3">
+      <rect x="840" y="580" width="340" height="480" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2" rx="5"/>
+      <rect x="850" y="590" width="320" height="40" fill="#e1bee7" rx="3"/>
+      <text x="1010" y="615" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Worker-3 (RHEL 9) - 10.100.0.23</text>
+      <text x="1010" y="630" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#666">32 vCPU • 64GB RAM • 250GB Storage</text>
+      
+      <!-- DaemonSets -->
+      <rect x="860" y="650" width="300" height="80" fill="#e8f5e9" stroke="#4caf50" stroke-width="2" rx="3"/>
+      <text x="1010" y="670" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">DaemonSets (Always Present)</text>
+      <text x="870" y="690" font-family="Arial, sans-serif" font-size="9">• Longhorn Manager &amp; Engine</text>
+      <text x="870" y="705" font-family="Arial, sans-serif" font-size="9">• NGINX Ingress Controller</text>
+      <text x="870" y="720" font-family="Arial, sans-serif" font-size="9">• Calico Node • kube-proxy • kubelet</text>
+      
+      <!-- Scheduled Pods -->
+      <text x="1010" y="755" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#666">Example Scheduler Placement:</text>
+      
+      <g transform="translate(880, 770)">
+        <circle cx="15" cy="15" r="12" fill="#ffeb3b" stroke="#f57c00" stroke-width="2"/>
+        <text x="35" y="20" font-family="Arial, sans-serif" font-size="9">grafana-65df7c</text>
+      </g>
+      
+      <g transform="translate(880, 810)">
+        <circle cx="15" cy="15" r="12" fill="#ffeb3b" stroke="#f57c00" stroke-width="2"/>
+        <text x="35" y="20" font-family="Arial, sans-serif" font-size="9">loki-0</text>
+      </g>
+      
+      <g transform="translate(880, 850)">
+        <circle cx="15" cy="15" r="12" fill="#ffeb3b" stroke="#f57c00" stroke-width="2"/>
+        <text x="35" y="20" font-family="Arial, sans-serif" font-size="9">velero-backup-ctrl-92kx</text>
+      </g>
+      
+      <g transform="translate(880, 890)">
+        <circle cx="15" cy="15" r="12" fill="#ffeb3b" stroke="#f57c00" stroke-width="2"/>
+        <text x="35" y="20" font-family="Arial, sans-serif" font-size="9">kubelet-csr-approver-3xz</text>
+      </g>
+      
+      <!-- Resource Usage -->
+      <rect x="860" y="940" width="300" height="100" fill="#fff" stroke="#666" stroke-width="1" rx="3"/>
+      <text x="1010" y="960" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">Resource Utilization</text>
+      <rect x="880" y="970" width="200" height="15" fill="#e0e0e0" rx="2"/>
+      <rect x="880" y="970" width="90" height="15" fill="#4caf50" rx="2"/>
+      <text x="1090" y="982" font-family="Arial, sans-serif" font-size="9">CPU: 45%</text>
+      
+      <rect x="880" y="990" width="200" height="15" fill="#e0e0e0" rx="2"/>
+      <rect x="880" y="990" width="120" height="15" fill="#2196f3" rx="2"/>
+      <text x="1090" y="1002" font-family="Arial, sans-serif" font-size="9">Memory: 60%</text>
+      
+      <rect x="880" y="1010" width="200" height="15" fill="#e0e0e0" rx="2"/>
+      <rect x="880" y="1010" width="70" height="15" fill="#ff9800" rx="2"/>
+      <text x="1090" y="1022" font-family="Arial, sans-serif" font-size="9">Storage: 35%</text>
+    </g>
+  </g>
+  
+  <!-- Scheduler Intelligence Box -->
+  <g id="scheduler-logic">
+    <rect x="100" y="1100" width="500" height="140" fill="#e8eaf6" stroke="#5e35b1" stroke-width="2" rx="5"/>
+    <text x="350" y="1125" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#5e35b1">Kubernetes Scheduler Logic</text>
+    <text x="110" y="1145" font-family="Arial, sans-serif" font-size="10">• Resource Requirements: CPU, Memory, Storage requests</text>
+    <text x="110" y="1160" font-family="Arial, sans-serif" font-size="10">• Pod Anti-Affinity: ACE replicas on different nodes</text>
+    <text x="110" y="1175" font-family="Arial, sans-serif" font-size="10">• Node Selectors: GPU workloads to GPU nodes</text>
+    <text x="110" y="1190" font-family="Arial, sans-serif" font-size="10">• Taints/Tolerations: Masters tainted NoSchedule</text>
+    <text x="110" y="1205" font-family="Arial, sans-serif" font-size="10">• Priority Classes: Critical pods get preference</text>
+    <text x="110" y="1220" font-family="Arial, sans-serif" font-size="10">• Topology Spread: Even distribution across zones</text>
+  </g>
+  
+  <!-- High Availability Features -->
+  <g id="ha-features">
+    <rect x="620" y="1100" width="580" height="140" fill="#e8f5e9" stroke="#388e3c" stroke-width="2" rx="5"/>
+    <text x="910" y="1125" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#388e3c">High Availability &amp; Resilience</text>
+    <text x="630" y="1145" font-family="Arial, sans-serif" font-size="10">• Node Failure Recovery: Pods auto-reschedule to healthy nodes</text>
+    <text x="630" y="1160" font-family="Arial, sans-serif" font-size="10">• Storage Resilience: Longhorn 3x replication across all workers</text>
+    <text x="630" y="1175" font-family="Arial, sans-serif" font-size="10">• Ingress HA: NGINX on all nodes via DaemonSet</text>
+    <text x="630" y="1190" font-family="Arial, sans-serif" font-size="10">• Control Plane HA: 3-node etcd quorum with kube-vip</text>
+    <text x="630" y="1205" font-family="Arial, sans-serif" font-size="10">• Zero Downtime: Rolling updates and blue-green deployments</text>
+    <text x="630" y="1220" font-family="Arial, sans-serif" font-size="10">• Auto-scaling: HPA/VPA for dynamic resource allocation</text>
+  </g>
+  
+  <!-- Connection arrows showing scheduler decisions -->
+  <defs>
+    <marker id="scheduler-arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#5e35b1"/>
+    </marker>
+  </defs>
+  
+  <!-- Scheduler to Workers arrows -->
+  <path d="M610 470 Q450 530 290 580" fill="none" stroke="#5e35b1" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#scheduler-arrow)"/>
+  <path d="M610 470 Q610 530 650 580" fill="none" stroke="#5e35b1" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#scheduler-arrow)"/>
+  <path d="M610 470 Q770 530 1010 580" fill="none" stroke="#5e35b1" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#scheduler-arrow)"/>
+  <text x="450" y="520" font-family="Arial, sans-serif" font-size="10" fill="#5e35b1">Scheduler places pods</text>
+</svg>

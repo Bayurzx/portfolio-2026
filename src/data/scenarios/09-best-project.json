@@ -1,0 +1,98 @@
+{
+    "id": "best_project_09",
+    "name": "Best Project",
+    "triggers": [
+        "best project",
+        "featured project",
+        "proudest work",
+        "favorite project",
+        "show me your projects",
+        "tell me about your projects"
+    ],
+    "keywords": [
+        "project",
+        "best",
+        "featured",
+        "proud",
+        "work",
+        "built"
+    ],
+    "response": {
+        "text": "I'm most proud of Synapse—an intelligent loan management platform that connects real-time credit intelligence with adaptive loan documentation and continuous covenant monitoring. It started as Credit_AI, a machine learning project to predict creditworthiness, and evolved into a full-fledged fintech solution. I'm also super proud of DockerHelper—an AI-powered tool that automatically generates optimized Docker configurations from any Git repo!",
+        "voiceText": "I'm most proud of Synapse, an intelligent loan management platform with real-time credit intelligence. Also proud of DockerHelper, an AI tool that generates Docker configurations automatically.",
+        "animationStyle": "professional",
+        "cards": [
+            {
+                "type": "project",
+                "data": {
+                    "title": "Synapse - Intelligent Loan Management",
+                    "image": "/images/projects/synapse.png",
+                    "description": "An intelligent loan management platform connecting real-time credit intelligence with adaptive loan documentation and continuous covenant monitoring. Built on Credit_AI's ML credit prediction foundation.",
+                    "techStack": [
+                        "Python",
+                        "Machine Learning",
+                        "FastAPI",
+                        "React",
+                        "PostgreSQL"
+                    ],
+                    "links": [
+                        {
+                            "label": "Live Demo",
+                            "url": "https://synapse-lma.vercel.app/",
+                            "type": "demo"
+                        },
+                        {
+                            "label": "Credit_AI",
+                            "url": "https://github.com/Bayurzx/credit_ai",
+                            "type": "github"
+                        },
+                        {
+                            "label": "Demo Video",
+                            "url": "https://www.youtube.com/watch?v=FvUVb0jaOuo",
+                            "type": "video"
+                        }
+                    ],
+                    "achievements": [
+                        "Real-time credit intelligence",
+                        "ML-powered creditworthiness prediction"
+                    ],
+                    "featured": true
+                }
+            },
+            {
+                "type": "project",
+                "data": {
+                    "title": "DockerHelper - AI Docker Generator",
+                    "image": "/images/projects/dockerhelper.png",
+                    "description": "An AI-powered developer tool that automatically generates optimized Docker configurations from a Git repo. Eliminates the tedious process of manually writing Dockerfiles.",
+                    "techStack": [
+                        "Python",
+                        "FastAPI",
+                        "React",
+                        "LLMs",
+                        "RAG",
+                        "Docker"
+                    ],
+                    "links": [
+                        {
+                            "label": "GitHub",
+                            "url": "https://github.com/Bayurzx/dockerhelper",
+                            "type": "github"
+                        },
+                        {
+                            "label": "Demo Video",
+                            "url": "https://www.youtube.com/watch?v=PUX_17Pd1E0",
+                            "type": "video"
+                        }
+                    ],
+                    "featured": true
+                }
+            }
+        ],
+        "suggestions": [
+            "Tell me about DockerHelper",
+            "Tell me about SaveEarth",
+            "Why so many hackathons?"
+        ]
+    }
+}

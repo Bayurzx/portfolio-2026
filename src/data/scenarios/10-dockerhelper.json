@@ -1,0 +1,74 @@
+{
+    "id": "dockerhelper_10",
+    "name": "DockerHelper Project",
+    "triggers": [
+        "dockerhelper",
+        "docker helper",
+        "docker generator",
+        "dockerfile generator"
+    ],
+    "keywords": [
+        "docker",
+        "helper",
+        "dockerfile",
+        "generator",
+        "ai",
+        "containerization"
+    ],
+    "response": {
+        "text": "DockerHelper is an AI-powered developer tool I built to solve a real pain point—manually writing Dockerfiles and docker-compose files for new projects. You point it at a Git repo, and it automatically generates optimized Docker configurations using LLMs and a RAG pipeline. It analyzes your codebase, understands the tech stack, and produces production-ready container configs. No more copy-pasting boilerplate!",
+        "voiceText": "DockerHelper is an AI tool I built to automatically generate optimized Docker configurations from any Git repo. No more manually writing Dockerfiles!",
+        "animationStyle": "professional",
+        "cards": [
+            {
+                "type": "project",
+                "data": {
+                    "title": "DockerHelper",
+                    "image": "/images/projects/dockerhelper.png",
+                    "description": "An AI-powered developer tool that automatically generates optimized Docker configurations from a Git repo. Uses LLMs and RAG to analyze your codebase and produce production-ready Dockerfiles and docker-compose files.",
+                    "techStack": [
+                        "Python",
+                        "FastAPI",
+                        "React",
+                        "LLMs",
+                        "RAG Pipeline",
+                        "PostgreSQL",
+                        "Docker"
+                    ],
+                    "links": [
+                        {
+                            "label": "GitHub",
+                            "url": "https://github.com/Bayurzx/dockerhelper",
+                            "type": "github"
+                        },
+                        {
+                            "label": "Demo Video",
+                            "url": "https://www.youtube.com/watch?v=PUX_17Pd1E0",
+                            "type": "video"
+                        }
+                    ],
+                    "achievements": [
+                        "Eliminates manual Dockerfile writing",
+                        "Analyzes codebase to detect tech stack",
+                        "Generates docker-compose configurations"
+                    ],
+                    "featured": true
+                }
+            },
+            {
+                "type": "media",
+                "data": {
+                    "type": "youtube",
+                    "url": "https://www.youtube.com/watch?v=PUX_17Pd1E0",
+                    "title": "DockerHelper Demo",
+                    "caption": "See DockerHelper in action!"
+                }
+            }
+        ],
+        "suggestions": [
+            "Tell me about SaveEarth",
+            "Show me your other projects",
+            "What's your tech stack?"
+        ]
+    }
+}

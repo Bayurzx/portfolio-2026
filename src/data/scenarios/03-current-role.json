@@ -1,0 +1,78 @@
+{
+    "id": "current_03",
+    "name": "Current Role",
+    "triggers": [
+        "current role",
+        "current job",
+        "what do you do now",
+        "where do you work",
+        "your job",
+        "infometics",
+        "uba"
+    ],
+    "keywords": [
+        "current",
+        "role",
+        "job",
+        "work",
+        "now",
+        "today"
+    ],
+    "response": {
+        "text": "I'm currently a Senior Cloud DevOps Engineer at Infometics, where UBA Group (United Bank for Africa) is one of our key clients. I architect and lead the implementation of secure, scalable cloud infrastructure. My primary project has been building a production-grade, highly available Kubernetes cluster on AWS in our development environment to validate stateful IBM workloads in a simulated, air-gapped environment.",
+        "voiceText": "I'm a Senior Cloud DevOps Engineer at Infometics. UBA Group is one of our key clients. I build secure, scalable cloud infrastructure and Kubernetes clusters.",
+        "animationStyle": "professional",
+        "cards": [
+            {
+                "type": "project",
+                "data": {
+                    "title": "Production-Grade K8s Cluster for IBM Workloads",
+                    "description": "A highly available, multi-master (3-node) Kubernetes cluster on AWS in development environment, designed to simulate a secure on-premise environment. Features zero-trust networking, software-defined storage, and full disaster recovery.",
+                    "techStack": [
+                        "AWS",
+                        "Kubernetes",
+                        "Terraform",
+                        "Kubespray",
+                        "Longhorn",
+                        "Calico",
+                        "Velero",
+                        "Prometheus",
+                        "Grafana"
+                    ],
+                    "achievements": [
+                        "Re-architected legacy IBM applications (ACE/MQ) as StatefulSets",
+                        "Proved workloads can run reliably in cloud-native, secure environment"
+                    ],
+                    "featured": true
+                }
+            },
+            {
+                "type": "stats",
+                "data": {
+                    "stats": [
+                        {
+                            "label": "K8s Nodes",
+                            "value": 3,
+                            "prefix": ""
+                        },
+                        {
+                            "label": "Uptime",
+                            "value": 99,
+                            "suffix": ".9%"
+                        },
+                        {
+                            "label": "Deployments",
+                            "value": 50,
+                            "suffix": "+"
+                        }
+                    ]
+                }
+            }
+        ],
+        "suggestions": [
+            "Tell me about Kubernetes",
+            "What's your tech stack?",
+            "Show me your certifications"
+        ]
+    }
+}

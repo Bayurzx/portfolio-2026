@@ -1,0 +1,90 @@
+{
+    "id": "resume_fullstack_28",
+    "name": "Full Stack Resume",
+    "triggers": [
+        "fullstack resume",
+        "full stack resume",
+        "developer resume"
+    ],
+    "keywords": [
+        "fullstack",
+        "full stack",
+        "developer",
+        "frontend",
+        "backend"
+    ],
+    "response": {
+        "text": "My Full Stack 'Glue' Engineer resume highlights my ability to connect frontend, backend, and infrastructure. I'm the engineer who can build React UIs, design FastAPI backends, AND deploy it all to Kubernetes. It's perfect if you need someone who understands the full picture!",
+        "voiceText": "My Full Stack resume highlights my ability to work across frontend, backend, and infrastructure. I'm the glue that connects everything.",
+        "animationStyle": "professional",
+        "cards": [
+            {
+                "type": "resume",
+                "data": {
+                    "title": "Available Resumes",
+                    "resumes": [
+                        {
+                            "name": "Full Stack & DevOps Resume",
+                            "description": "Frontend + Backend + DevOps",
+                            "file": "/resumes/ADEBAYO CV (Full-stack) 2025.pdf",
+                            "type": "general"
+                        },
+                        {
+                            "name": "Comprehensive CV",
+                            "description": "Complete career history",
+                            "file": "/resumes/ADEBAYO CV 2025_10.pdf",
+                            "type": "cv"
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "skills",
+                "data": {
+                    "title": "Full Stack Skills",
+                    "categories": [
+                        {
+                            "name": "Frontend",
+                            "skills": [
+                                {
+                                    "name": "React",
+                                    "level": "advanced"
+                                },
+                                {
+                                    "name": "Next.js",
+                                    "level": "advanced"
+                                },
+                                {
+                                    "name": "TypeScript",
+                                    "level": "advanced"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Backend",
+                            "skills": [
+                                {
+                                    "name": "FastAPI",
+                                    "level": "advanced"
+                                },
+                                {
+                                    "name": "Python",
+                                    "level": "advanced"
+                                },
+                                {
+                                    "name": "Node.js",
+                                    "level": "intermediate"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ],
+        "suggestions": [
+            "Show me your projects",
+            "I want to hire you",
+            "What's your tech stack?"
+        ]
+    }
+}

@@ -1,0 +1,67 @@
+{
+    "id": "awards_19",
+    "name": "Awards & Wins",
+    "triggers": [
+        "awards",
+        "wins",
+        "achievements",
+        "what have you won"
+    ],
+    "keywords": [
+        "award",
+        "win",
+        "winner",
+        "achievement",
+        "prize"
+    ],
+    "response": {
+        "text": "I've been fortunate to win several hackathons and receive recognition for my work! Notable wins include Bunnyshell Hackathon (Team Lead, 2023), Celo's Make Crypto Mobile (1st Place Web3 Track, 2021), Datastax Holiday Hackathon (EMEA Winner, 2021), SaveEarth (2 hackathon wins + AWS funding), and AutoDocs CodeShift (3rd Place). Each win validated months of learning and building!",
+        "voiceText": "My notable wins include Bunnyshell Hackathon, Celo Make Crypto Mobile first place, Datastax EMEA Winner, and awards for SaveEarth and AutoDocs.",
+        "animationStyle": "playful",
+        "cards": [
+            {
+                "type": "timeline",
+                "data": {
+                    "title": "Awards & Achievements",
+                    "events": [
+                        {
+                            "year": "2023",
+                            "title": "Bunnyshell Hackathon Winner",
+                            "description": "Led team to victory in cloud deployment hackathon.",
+                            "type": "achievement"
+                        },
+                        {
+                            "year": "2023",
+                            "title": "AutoDocs: CodeShift - 3rd Place",
+                            "description": "DocOps solution built on OpenShift with Knative.",
+                            "type": "achievement"
+                        },
+                        {
+                            "year": "2021",
+                            "title": "Celo Make Crypto Mobile - 1st Place",
+                            "description": "Won the Web3 track for mobile crypto innovation.",
+                            "type": "achievement"
+                        },
+                        {
+                            "year": "2021",
+                            "title": "Datastax Holiday Hackathon - EMEA Winner",
+                            "description": "Category winner for the EMEA region.",
+                            "type": "achievement"
+                        },
+                        {
+                            "year": "2020",
+                            "title": "SaveEarth - Double Win + AWS Funding",
+                            "description": "Won 2 hackathons and received AWS funding for environmental AI project.",
+                            "type": "achievement"
+                        }
+                    ]
+                }
+            }
+        ],
+        "suggestions": [
+            "Tell me about SaveEarth",
+            "Why so many hackathons?",
+            "Show me your projects"
+        ]
+    }
+}

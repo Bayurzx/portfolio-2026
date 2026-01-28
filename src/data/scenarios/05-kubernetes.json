@@ -1,0 +1,57 @@
+{
+    "id": "kubernetes_05",
+    "name": "Kubernetes Experience",
+    "triggers": [
+        "kubernetes",
+        "k8s",
+        "container orchestration",
+        "clusters"
+    ],
+    "keywords": [
+        "kubernetes",
+        "k8s",
+        "cluster",
+        "containers",
+        "pods",
+        "orchestration"
+    ],
+    "response": {
+        "text": "Kubernetes is where I thrive! My flagship project was building a production-grade, highly available multi-master Kubernetes cluster on AWS. It includes a software-defined storage layer (Longhorn), zero-trust network model (Calico), and full disaster recovery (Velero). I successfully re-architected legacy stateful IBM applications as robust StatefulSets, proving they could run reliably in a modern cloud-native environment.",
+        "voiceText": "Kubernetes is where I thrive! I've built production-grade, highly available clusters on AWS with zero-trust networking and full disaster recovery.",
+        "animationStyle": "professional",
+        "cards": [
+            {
+                "type": "project",
+                "data": {
+                    "title": "Enterprise K8s Infrastructure",
+                    "description": "A highly available, multi-master (3-node) Kubernetes cluster on AWS designed to simulate a secure on-premise environment for UBA Group's IBM workload validation.",
+                    "techStack": [
+                        "Kubernetes",
+                        "AWS",
+                        "Terraform",
+                        "Kubespray",
+                        "kube-vip",
+                        "Longhorn",
+                        "Calico",
+                        "NGINX Ingress",
+                        "Velero",
+                        "Prometheus",
+                        "Grafana"
+                    ],
+                    "achievements": [
+                        "Multi-master HA setup with 3 control plane nodes",
+                        "Zero-trust network model with Calico",
+                        "Software-defined storage with Longhorn",
+                        "Full disaster recovery with Velero"
+                    ],
+                    "featured": true
+                }
+            }
+        ],
+        "suggestions": [
+            "Tell me about Terraform",
+            "What's your current role?",
+            "Show me your certifications"
+        ]
+    }
+}

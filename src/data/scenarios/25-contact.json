@@ -1,0 +1,60 @@
+{
+    "id": "contact_25",
+    "name": "Contact Info",
+    "triggers": [
+        "contact",
+        "email",
+        "reach you",
+        "get in touch",
+        "how can i contact"
+    ],
+    "keywords": [
+        "contact",
+        "email",
+        "reach",
+        "touch",
+        "message"
+    ],
+    "response": {
+        "text": "I'd love to connect! The best way to reach me is via email at bayurzx@gmail.com. You can also find me on LinkedIn, GitHub, Twitter/X, and Devpost. I'm based in Lagos, Nigeria (GMT+1) and available for remote work globally!",
+        "voiceText": "The best way to reach me is via email at bayurzx@gmail.com. I'm based in Lagos, Nigeria and available for remote work globally.",
+        "animationStyle": "professional",
+        "cards": [
+            {
+                "type": "contact",
+                "data": {
+                    "email": "bayurzx@gmail.com",
+                    "location": "Lagos, Nigeria (GMT+1)",
+                    "availability": "Available for remote work",
+                    "socials": [
+                        {
+                            "type": "github",
+                            "url": "https://github.com/Bayurzx"
+                        },
+                        {
+                            "type": "linkedin",
+                            "url": "https://linkedin.com/in/adebayo-omolumo"
+                        },
+                        {
+                            "type": "twitter",
+                            "url": "https://x.com/AdebayoOmolumo"
+                        },
+                        {
+                            "type": "devpost",
+                            "url": "https://devpost.com/bayurzx"
+                        },
+                        {
+                            "type": "website",
+                            "url": "https://work.adebayoomolumo.website"
+                        }
+                    ]
+                }
+            }
+        ],
+        "suggestions": [
+            "I want to hire you",
+            "Show me your resume",
+            "Tell me about your projects"
+        ]
+    }
+}

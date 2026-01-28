@@ -1,0 +1,42 @@
+{
+    "id": "motivation_23",
+    "name": "Motivation",
+    "triggers": [
+        "what motivates you",
+        "motivation",
+        "what drives you",
+        "passion"
+    ],
+    "keywords": [
+        "motivate",
+        "drive",
+        "passion",
+        "why"
+    ],
+    "response": {
+        "text": "Solving puzzles that others find difficult! The feeling of taking a complex, messy system, untangling it, and automating it into something elegant and reliable is what drives me. I'm motivated by seeing the direct impact of my work—whether it's saving a client 60% on cloud costs or enabling a development team to ship code twice as fast. There's nothing like watching a well-architected system just *work*.",
+        "voiceText": "I'm driven by solving complex puzzles and seeing the direct impact of my work. Saving clients money, enabling faster deployments—that's what motivates me.",
+        "animationStyle": "professional",
+        "cards": [
+            {
+                "type": "bio",
+                "data": {
+                    "name": "Adebayo Omolumo",
+                    "title": "\"I turn complex challenges into elegant solutions\"",
+                    "shortBio": "My passion is turning complex infrastructure challenges into simple, automated solutions. I'm the engineer who can architect your infrastructure, debug your pipeline at midnight, AND explain it to your CEO in plain English.",
+                    "socials": [
+                        {
+                            "type": "linkedin",
+                            "url": "https://linkedin.com/in/adebayo-omolumo"
+                        }
+                    ]
+                }
+            }
+        ],
+        "suggestions": [
+            "What are your future goals?",
+            "How can I contact you?",
+            "I want to hire you"
+        ]
+    }
+}

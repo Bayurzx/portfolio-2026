@@ -1,0 +1,62 @@
+{
+    "id": "hackathon_count_18",
+    "name": "Hackathon Stats",
+    "triggers": [
+        "hackathon stats",
+        "how many hackathons",
+        "hackathon count"
+    ],
+    "keywords": [
+        "hackathon",
+        "count",
+        "how many",
+        "competed"
+    ],
+    "response": {
+        "text": "I've participated in 15+ hackathons and counting! It's been an incredible journey of learning, building under pressure, and meeting amazing developers. My Devpost profile (devpost.com/bayurzx) has all my submissions if you want to see the full history!",
+        "voiceText": "I've participated in over 15 hackathons! Check out my Devpost profile to see all my submissions.",
+        "animationStyle": "playful",
+        "cards": [
+            {
+                "type": "stats",
+                "data": {
+                    "title": "Hackathon Stats",
+                    "stats": [
+                        {
+                            "label": "Hackathons",
+                            "value": 15,
+                            "suffix": "+"
+                        },
+                        {
+                            "label": "Wins/Placements",
+                            "value": 5
+                        },
+                        {
+                            "label": "Projects Built",
+                            "value": 20,
+                            "suffix": "+"
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "contact",
+                "data": {
+                    "email": "adebayoomolumo@gmail.com",
+                    "socials": [
+                        {
+                            "type": "devpost",
+                            "url": "https://devpost.com/bayurzx",
+                            "label": "My Devpost"
+                        }
+                    ]
+                }
+            }
+        ],
+        "suggestions": [
+            "Why so many hackathons?",
+            "Show me your hackathon projects",
+            "What awards have you won?"
+        ]
+    }
+}

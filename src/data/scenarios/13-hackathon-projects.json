@@ -1,0 +1,87 @@
+{
+    "id": "hackathon_projects_13",
+    "name": "Hackathon Projects",
+    "triggers": [
+        "hackathon projects",
+        "hackathon work",
+        "competition projects"
+    ],
+    "keywords": [
+        "hackathon",
+        "competition",
+        "devpost",
+        "projects"
+    ],
+    "response": {
+        "text": "Hackathons have been my playground for innovation! Here are some highlights: SmartWait (virtual queue for healthcare), Cross-Chain Prediction Market (Web3), Chainlink Oracle Integration (AWS + CircleCI), AutoDocs AI (DocOps on OpenShift), and Rust Combiner (CLI tool). Each one taught me something new and pushed my skills to the limit!",
+        "voiceText": "My hackathon highlights include SmartWait, Cross-Chain Prediction Market, Chainlink Oracle Integration, and AutoDocs AI. Each one pushed my skills to the limit!",
+        "animationStyle": "playful",
+        "cards": [
+            {
+                "type": "project",
+                "data": {
+                    "title": "SmartWait - Virtual Queue Management",
+                    "description": "A full-stack virtual queue management system for healthcare using real-time communication.",
+                    "techStack": [
+                        "Node.js",
+                        "Prisma",
+                        "Socket.io",
+                        "React"
+                    ]
+                }
+            },
+            {
+                "type": "project",
+                "data": {
+                    "title": "AutoDocs AI - DocOps on OpenShift",
+                    "image": "/images/projects/autodocs.png",
+                    "description": "Real-time documentation operations with Red Hat OpenShift and Knative-powered event-driven automation.",
+                    "techStack": [
+                        "OpenShift",
+                        "Knative",
+                        "Python",
+                        "FastAPI"
+                    ],
+                    "links": [
+                        {
+                            "label": "Frontend",
+                            "url": "https://github.com/Bayurzx/CodeShift-Front",
+                            "type": "github"
+                        },
+                        {
+                            "label": "Backend",
+                            "url": "https://github.com/Bayurzx/CodeShift-Back",
+                            "type": "github"
+                        },
+                        {
+                            "label": "Demo",
+                            "url": "https://www.youtube.com/watch?v=tSw-pJT0J-o",
+                            "type": "video"
+                        }
+                    ],
+                    "achievements": [
+                        "3rd Place Winner"
+                    ]
+                }
+            },
+            {
+                "type": "project",
+                "data": {
+                    "title": "Cross-Chain Prediction Market",
+                    "description": "A full-stack Web3 app for decentralized prediction markets.",
+                    "techStack": [
+                        "TypeScript",
+                        "Web3",
+                        "PostgreSQL",
+                        "Docker"
+                    ]
+                }
+            }
+        ],
+        "suggestions": [
+            "Why so many hackathons?",
+            "Show me your awards",
+            "What's your Devpost profile?"
+        ]
+    }
+}

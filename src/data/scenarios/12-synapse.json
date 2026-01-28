@@ -1,0 +1,78 @@
+{
+    "id": "synapse_12",
+    "name": "Synapse Project",
+    "triggers": [
+        "synapse",
+        "credit ai",
+        "loan management",
+        "creditworthiness"
+    ],
+    "keywords": [
+        "synapse",
+        "credit",
+        "loan",
+        "fintech",
+        "ml",
+        "machine learning"
+    ],
+    "response": {
+        "text": "Synapse is my intelligent loan management platform! It started as Credit_AI—a machine learning project to predict creditworthiness—and evolved into a full fintech solution. Synapse connects real-time credit intelligence with adaptive loan documentation and continuous covenant monitoring. It's a great example of how ML can transform financial services.",
+        "voiceText": "Synapse is my intelligent loan management platform. It uses machine learning for real-time credit intelligence and adaptive loan documentation.",
+        "animationStyle": "professional",
+        "cards": [
+            {
+                "type": "project",
+                "data": {
+                    "title": "Synapse - Intelligent Loan Management",
+                    "image": "/images/projects/synapse.png",
+                    "description": "A full-fledged fintech solution connecting real-time credit intelligence with adaptive loan documentation. Built on Credit_AI's machine learning foundation for creditworthiness prediction.",
+                    "techStack": [
+                        "Python",
+                        "Machine Learning",
+                        "FastAPI",
+                        "React",
+                        "PostgreSQL",
+                        "Financial APIs"
+                    ],
+                    "links": [
+                        {
+                            "label": "Live Demo",
+                            "url": "https://synapse-lma.vercel.app/",
+                            "type": "demo"
+                        },
+                        {
+                            "label": "Credit_AI GitHub",
+                            "url": "https://github.com/Bayurzx/credit_ai",
+                            "type": "github"
+                        },
+                        {
+                            "label": "Demo Video",
+                            "url": "https://www.youtube.com/watch?v=FvUVb0jaOuo",
+                            "type": "video"
+                        }
+                    ],
+                    "achievements": [
+                        "Real-time credit intelligence",
+                        "ML-powered credit prediction",
+                        "Adaptive documentation system"
+                    ],
+                    "featured": true
+                }
+            },
+            {
+                "type": "media",
+                "data": {
+                    "type": "youtube",
+                    "url": "https://www.youtube.com/watch?v=FvUVb0jaOuo",
+                    "title": "Synapse Demo",
+                    "caption": "See how Synapse transforms loan management"
+                }
+            }
+        ],
+        "suggestions": [
+            "Tell me about DockerHelper",
+            "What's your tech stack?",
+            "Show me your other projects"
+        ]
+    }
+}

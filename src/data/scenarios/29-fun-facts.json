@@ -1,0 +1,43 @@
+{
+    "id": "fun_facts_29",
+    "name": "Fun Facts",
+    "triggers": [
+        "fun facts",
+        "hobbies",
+        "personal",
+        "outside work"
+    ],
+    "keywords": [
+        "fun",
+        "hobby",
+        "personal",
+        "gaming",
+        "music"
+    ],
+    "response": {
+        "text": "Outside of coding, I'm an avid gamer (strategy and RPGs are my jam!), an eclectic music enthusiast always exploring new genres, and I love traveling and experiencing different cultures. I speak English fluently and Yoruba natively. And yes, I take my coffee seriously—it fuels the late-night debugging sessions!",
+        "voiceText": "Outside of coding, I'm into gaming, music, and travel. I speak English and Yoruba, and coffee fuels my late-night debugging sessions!",
+        "animationStyle": "playful",
+        "cards": [
+            {
+                "type": "bio",
+                "data": {
+                    "name": "Adebayo Omolumo",
+                    "title": "Fun Facts Edition",
+                    "shortBio": "🎮 Avid gamer (strategy & RPGs) | 🎵 Music enthusiast | ✈️ Travel lover | ☕ Coffee-powered debugger | 🗣️ English & Yoruba speaker",
+                    "socials": [
+                        {
+                            "type": "twitter",
+                            "url": "https://x.com/AdebayoOmolumo"
+                        }
+                    ]
+                }
+            }
+        ],
+        "suggestions": [
+            "Tell me about yourself",
+            "What motivates you?",
+            "How can I contact you?"
+        ]
+    }
+}

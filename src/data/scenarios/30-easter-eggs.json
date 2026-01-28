@@ -1,0 +1,53 @@
+{
+    "id": "easter_eggs_30",
+    "name": "Easter Eggs",
+    "triggers": [
+        "easter egg",
+        "secret",
+        "matrix",
+        "confetti",
+        "kube",
+        "docker",
+        "all the clouds"
+    ],
+    "keywords": [
+        "easter",
+        "egg",
+        "secret",
+        "hidden",
+        "surprise"
+    ],
+    "response": {
+        "text": "🥚 You found the secret menu! Try typing some of these commands: 'matrix' for a Matrix rain effect, 'confetti' for a celebration, 'kube' or 'docker' for container animations, or 'all the clouds' to see AWS, Azure, and GCP logos float across the screen. More easter eggs are hidden throughout—can you find them all?",
+        "voiceText": "You found the secret menu! Try matrix, confetti, kube, docker, or all the clouds for some fun surprises!",
+        "animationStyle": "playful",
+        "cards": [
+            {
+                "type": "stats",
+                "data": {
+                    "title": "Easter Egg Stats",
+                    "stats": [
+                        {
+                            "label": "Eggs Hidden",
+                            "value": 5
+                        },
+                        {
+                            "label": "Eggs Found",
+                            "value": 1
+                        },
+                        {
+                            "label": "Fun Level",
+                            "value": 100,
+                            "suffix": "%"
+                        }
+                    ]
+                }
+            }
+        ],
+        "suggestions": [
+            "Tell me about yourself",
+            "Show me your projects",
+            "I want to hire you"
+        ]
+    }
+}

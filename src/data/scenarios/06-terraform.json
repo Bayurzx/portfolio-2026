@@ -1,0 +1,76 @@
+{
+    "id": "terraform_06",
+    "name": "Terraform & IaC",
+    "triggers": [
+        "terraform",
+        "infrastructure as code",
+        "iac",
+        "provisioning"
+    ],
+    "keywords": [
+        "terraform",
+        "iac",
+        "infrastructure",
+        "code",
+        "provisioning",
+        "modules"
+    ],
+    "response": {
+        "text": "Terraform is my primary tool for provisioning cloud resources declaratively. I use it to define everything from VPCs and subnets to EC2 instances and Kubernetes nodes. I enforce a strict 'everything as code' policy to ensure environments are repeatable, auditable, and consistent. My favorite pattern? Creating reusable, versioned modules—like a standardized secure GKE cluster module that can be invoked across projects with different variables.",
+        "voiceText": "Terraform is my primary tool for provisioning cloud resources. I enforce an everything-as-code policy and love creating reusable, versioned modules.",
+        "animationStyle": "professional",
+        "cards": [
+            {
+                "type": "skills",
+                "data": {
+                    "title": "Infrastructure as Code",
+                    "categories": [
+                        {
+                            "name": "IaC Tools",
+                            "skills": [
+                                {
+                                    "name": "Terraform",
+                                    "level": "advanced"
+                                },
+                                {
+                                    "name": "Pulumi",
+                                    "level": "intermediate"
+                                },
+                                {
+                                    "name": "CloudFormation",
+                                    "level": "advanced"
+                                },
+                                {
+                                    "name": "Ansible",
+                                    "level": "advanced"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Best Practices",
+                            "skills": [
+                                {
+                                    "name": "Reusable Modules"
+                                },
+                                {
+                                    "name": "State Management"
+                                },
+                                {
+                                    "name": "Version Control"
+                                },
+                                {
+                                    "name": "CI/CD Integration"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ],
+        "suggestions": [
+            "Which cloud do you prefer?",
+            "Tell me about Kubernetes",
+            "What's your tech stack?"
+        ]
+    }
+}

@@ -1,0 +1,69 @@
+{
+    "id": "github_14",
+    "name": "GitHub Profile",
+    "triggers": [
+        "github",
+        "github profile",
+        "your repos",
+        "source code"
+    ],
+    "keywords": [
+        "github",
+        "repos",
+        "code",
+        "open source"
+    ],
+    "response": {
+        "text": "My GitHub is where all the magic happens! You can find all my open-source projects, hackathon submissions, and experiments at github.com/Bayurzx. Notable repos include DockerHelper, SaveEarth, Synapse, AutoDocs, and various cloud/DevOps infrastructure templates. I also maintain a certificates repo showing all my certifications!",
+        "voiceText": "Check out my GitHub at github.com/Bayurzx for all my projects, hackathon submissions, and cloud infrastructure templates.",
+        "animationStyle": "professional",
+        "cards": [
+            {
+                "type": "contact",
+                "data": {
+                    "email": "bayurzx@gmail.com",
+                    "socials": [
+                        {
+                            "type": "github",
+                            "url": "https://github.com/Bayurzx",
+                            "label": "Bayurzx"
+                        },
+                        {
+                            "type": "devpost",
+                            "url": "https://devpost.com/bayurzx",
+                            "label": "Devpost"
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "stats",
+                "data": {
+                    "title": "GitHub Activity",
+                    "stats": [
+                        {
+                            "label": "Public Repos",
+                            "value": 50,
+                            "suffix": "+"
+                        },
+                        {
+                            "label": "Hackathon Projects",
+                            "value": 15,
+                            "suffix": "+"
+                        },
+                        {
+                            "label": "Contributions",
+                            "value": 500,
+                            "suffix": "+"
+                        }
+                    ]
+                }
+            }
+        ],
+        "suggestions": [
+            "Tell me about DockerHelper",
+            "Show me your projects",
+            "How can I contact you?"
+        ]
+    }
+}

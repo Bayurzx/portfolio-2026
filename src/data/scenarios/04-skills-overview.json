@@ -1,0 +1,115 @@
+{
+    "id": "skills_04",
+    "name": "Skills Overview",
+    "triggers": [
+        "tech stack",
+        "your skills",
+        "what technologies",
+        "skills overview",
+        "what can you do",
+        "technologies you use"
+    ],
+    "keywords": [
+        "skills",
+        "tech",
+        "stack",
+        "technologies",
+        "tools",
+        "expertise"
+    ],
+    "response": {
+        "text": "I'm a multi-cloud expert with deep experience across AWS, Azure, and GCP. My toolkit includes Kubernetes, Docker, Terraform, and modern CI/CD pipelines. On the programming side, I work with Python, TypeScript, Rust, and Bash. I believe in choosing the right tool for the job, not forcing a one-size-fits-all approach.",
+        "voiceText": "I'm a multi-cloud expert with deep experience across AWS, Azure, and GCP. I work with Kubernetes, Docker, Terraform, and modern CI/CD pipelines.",
+        "animationStyle": "professional",
+        "cards": [
+            {
+                "type": "skills",
+                "data": {
+                    "title": "Technical Skills",
+                    "categories": [
+                        {
+                            "name": "Cloud & Infrastructure",
+                            "skills": [
+                                {
+                                    "name": "AWS",
+                                    "level": "expert"
+                                },
+                                {
+                                    "name": "Azure",
+                                    "level": "expert"
+                                },
+                                {
+                                    "name": "GCP",
+                                    "level": "expert"
+                                },
+                                {
+                                    "name": "Kubernetes",
+                                    "level": "advanced"
+                                },
+                                {
+                                    "name": "Docker",
+                                    "level": "expert"
+                                },
+                                {
+                                    "name": "Terraform",
+                                    "level": "advanced"
+                                },
+                                {
+                                    "name": "OpenShift",
+                                    "level": "advanced"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Programming",
+                            "skills": [
+                                {
+                                    "name": "Python",
+                                    "level": "advanced"
+                                },
+                                {
+                                    "name": "TypeScript",
+                                    "level": "advanced"
+                                },
+                                {
+                                    "name": "Rust",
+                                    "level": "intermediate"
+                                },
+                                {
+                                    "name": "Bash",
+                                    "level": "advanced"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "DevOps & CI/CD",
+                            "skills": [
+                                {
+                                    "name": "GitHub Actions",
+                                    "level": "advanced"
+                                },
+                                {
+                                    "name": "GitLab CI",
+                                    "level": "advanced"
+                                },
+                                {
+                                    "name": "ArgoCD",
+                                    "level": "advanced"
+                                },
+                                {
+                                    "name": "CircleCI",
+                                    "level": "intermediate"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ],
+        "suggestions": [
+            "Tell me about Kubernetes",
+            "Tell me about Terraform",
+            "Which cloud do you prefer?"
+        ]
+    }
+}

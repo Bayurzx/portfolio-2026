@@ -1,0 +1,61 @@
+{
+    "id": "future_goals_24",
+    "name": "Future Goals",
+    "triggers": [
+        "future goals",
+        "career goals",
+        "where do you see yourself",
+        "aspirations"
+    ],
+    "keywords": [
+        "future",
+        "goal",
+        "aspiration",
+        "plan",
+        "career"
+    ],
+    "response": {
+        "text": "My goal is to move into a Staff or Principal Engineer role, or a higher-level leadership position where I can influence technical strategy on a broader scale. I want to be solving the most complex architectural challenges for businesses while also mentoring the next generation of engineers. I'm also working toward becoming a Kubestronaut—earning all CNCF Kubernetes certifications—and contributing more to open source and the cloud-native community.",
+        "voiceText": "I aim to become a Staff or Principal Engineer, become a Kubestronaut with all K8s certifications, and mentor the next generation of engineers.",
+        "animationStyle": "professional",
+        "cards": [
+            {
+                "type": "timeline",
+                "data": {
+                    "title": "Future Roadmap",
+                    "events": [
+                        {
+                            "year": "Now",
+                            "title": "Senior Cloud DevOps Engineer",
+                            "description": "Building enterprise infrastructure and AI portfolio projects.",
+                            "type": "work"
+                        },
+                        {
+                            "year": "2025",
+                            "title": "Staff Engineer",
+                            "description": "Influence technical strategy, lead complex architectural decisions.",
+                            "type": "project"
+                        },
+                        {
+                            "year": "2026",
+                            "title": "Kubestronaut 🚀",
+                            "description": "Earn all CNCF Kubernetes certifications (CKA, CKAD, CKS, KCNA, KCSA).",
+                            "type": "achievement"
+                        },
+                        {
+                            "year": "2027",
+                            "title": "Principal Engineer / Tech Lead",
+                            "description": "Shape company-wide engineering culture, mentor teams.",
+                            "type": "project"
+                        }
+                    ]
+                }
+            }
+        ],
+        "suggestions": [
+            "How can I contact you?",
+            "I want to hire you",
+            "What motivates you?"
+        ]
+    }
+}

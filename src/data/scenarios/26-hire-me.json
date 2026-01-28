@@ -1,0 +1,74 @@
+{
+    "id": "hire_me_26",
+    "name": "Hire Me",
+    "triggers": [
+        "hire you",
+        "hire me",
+        "available for work",
+        "looking for work",
+        "freelance"
+    ],
+    "keywords": [
+        "hire",
+        "work",
+        "available",
+        "freelance",
+        "contract"
+    ],
+    "response": {
+        "text": "Thanks for considering me! I'm currently employed full-time but always open to interesting opportunities—especially remote roles involving cloud architecture, Kubernetes, DevOps strategy, or AI/ML infrastructure. For consulting or freelance projects, I'm selectively available through Iglumtech. Let's connect and discuss how I can help!",
+        "voiceText": "I'm open to interesting opportunities! I'm especially interested in cloud architecture, Kubernetes, and DevOps strategy roles. Let's connect!",
+        "animationStyle": "professional",
+        "cards": [
+            {
+                "type": "contact",
+                "data": {
+                    "email": "adebayoomolumo@gmail.com",
+                    "location": "Lagos, Nigeria (GMT+1)",
+                    "availability": "Open to opportunities",
+                    "socials": [
+                        {
+                            "type": "linkedin",
+                            "url": "https://linkedin.com/in/adebayo-omolumo"
+                        },
+                        {
+                            "type": "email",
+                            "url": "adebayoomolumo@gmail.com"
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "resume",
+                "data": {
+                    "title": "Download My Resume",
+                    "resumes": [
+                        {
+                            "name": "DevOps Lead Resume",
+                            "description": "Focus on cloud infrastructure and DevOps leadership",
+                            "file": "/resumes/devops-lead.pdf",
+                            "type": "specialized"
+                        },
+                        {
+                            "name": "Full Stack Resume",
+                            "description": "Full Stack 'Glue' Engineer focus",
+                            "file": "/resumes/fullstack.pdf",
+                            "type": "specialized"
+                        },
+                        {
+                            "name": "Comprehensive CV",
+                            "description": "Complete career history",
+                            "file": "/resumes/cv.pdf",
+                            "type": "cv"
+                        }
+                    ]
+                }
+            }
+        ],
+        "suggestions": [
+            "Show me your projects",
+            "What's your tech stack?",
+            "How can I contact you?"
+        ]
+    }
+}

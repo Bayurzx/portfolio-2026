@@ -1,0 +1,49 @@
+{
+    "id": "why_hackathons_21",
+    "name": "Why Hackathons",
+    "triggers": [
+        "why hackathons",
+        "why so many hackathons",
+        "hackathon philosophy"
+    ],
+    "keywords": [
+        "why",
+        "hackathon",
+        "philosophy",
+        "reason"
+    ],
+    "response": {
+        "text": "I see hackathons as the ultimate competitive sport for engineers! They force you to learn a new technology under intense pressure, collaborate with a team, and ship a functional product in 48 hours. It's the fastest way to go from zero to one on a new skill. Plus, nothing solidifies knowledge like building something real with tight deadlines. The adrenaline rush of shipping under pressure is addictive!",
+        "voiceText": "Hackathons are my competitive sport! They force you to learn fast, build under pressure, and ship in 48 hours. It's the fastest way to master new skills.",
+        "animationStyle": "playful",
+        "cards": [
+            {
+                "type": "stats",
+                "data": {
+                    "title": "Hackathon Journey",
+                    "stats": [
+                        {
+                            "label": "Hackathons",
+                            "value": 15,
+                            "suffix": "+"
+                        },
+                        {
+                            "label": "Awards Won",
+                            "value": 5
+                        },
+                        {
+                            "label": "Skills Learned",
+                            "value": 20,
+                            "suffix": "+"
+                        }
+                    ]
+                }
+            }
+        ],
+        "suggestions": [
+            "Show me your hackathon projects",
+            "What awards have you won?",
+            "How do you stay updated?"
+        ]
+    }
+}

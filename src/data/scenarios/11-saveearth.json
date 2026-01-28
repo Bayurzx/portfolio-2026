@@ -1,0 +1,72 @@
+{
+    "id": "saveearth_11",
+    "name": "SaveEarth Project",
+    "triggers": [
+        "saveearth",
+        "save earth",
+        "endangered species",
+        "environmental"
+    ],
+    "keywords": [
+        "save",
+        "earth",
+        "endangered",
+        "species",
+        "environment",
+        "azure"
+    ],
+    "response": {
+        "text": "SaveEarth is one of my proudest achievements! It's an award-winning AI platform to raise awareness for endangered species. It won two hackathons and received funding from AWS. The platform uses Microsoft Azure's Custom Vision AI to identify and educate users about endangered animals. It was a passion project that combined my love for tech with environmental advocacy.",
+        "voiceText": "SaveEarth is an award-winning AI platform for endangered species awareness. It won two hackathons and received AWS funding.",
+        "animationStyle": "playful",
+        "cards": [
+            {
+                "type": "project",
+                "data": {
+                    "title": "SaveEarth - AI for Endangered Species",
+                    "image": "/images/projects/save_earth.png",
+                    "description": "An award-winning AI platform to raise awareness for endangered species. Uses Azure Custom Vision to identify animals and educate users about conservation.",
+                    "techStack": [
+                        "Microsoft Azure",
+                        "Azure Custom Vision",
+                        "AI/ML",
+                        "Blob Storage",
+                        "React"
+                    ],
+                    "links": [
+                        {
+                            "label": "GitHub",
+                            "url": "https://github.com/Bayurzx/SE",
+                            "type": "github"
+                        },
+                        {
+                            "label": "Demo Video",
+                            "url": "https://www.youtube.com/watch?v=t8w5vo5yMLc",
+                            "type": "video"
+                        }
+                    ],
+                    "achievements": [
+                        "2 hackathon wins",
+                        "Received funding from AWS",
+                        "AI-powered species identification"
+                    ],
+                    "featured": true
+                }
+            },
+            {
+                "type": "media",
+                "data": {
+                    "type": "youtube",
+                    "url": "https://www.youtube.com/watch?v=t8w5vo5yMLc",
+                    "title": "SaveEarth Demo",
+                    "caption": "Watch SaveEarth in action!"
+                }
+            }
+        ],
+        "suggestions": [
+            "Tell me about other projects",
+            "Why so many hackathons?",
+            "Show me your awards"
+        ]
+    }
+}

@@ -1,0 +1,85 @@
+{
+    "id": "intro_01",
+    "name": "Introduction",
+    "triggers": [
+        "who are you",
+        "introduce yourself",
+        "tell me about yourself",
+        "what do you do",
+        "hello",
+        "hi"
+    ],
+    "keywords": [
+        "intro",
+        "about",
+        "name",
+        "who",
+        "hello"
+    ],
+    "response": {
+        "text": "Hey! I'm Adebayo Omolumo, a Senior DevOps & Cloud Engineer with 8+ years of experience building scalable infrastructure. I co-founded Iglumtech and have participated in 15+ hackathons. I specialize in Multi-Cloud (AWS, Azure, GCP), Kubernetes, and Infrastructure as Code.",
+        "voiceText": "Hey! I'm Adebayo Omolumo, a Senior DevOps and Cloud Engineer with 8 plus years of experience. I specialize in Multi-Cloud, Kubernetes, and Infrastructure as Code.",
+        "animationStyle": "professional",
+        "cards": [
+            {
+                "type": "bio",
+                "data": {
+                    "name": "Adebayo Omolumo",
+                    "title": "Senior DevOps & Cloud Engineer | Full Stack Developer",
+                    "photo": "/images/profile.jpg",
+                    "shortBio": "I build the invisible infrastructure that makes great software possible. 8+ years turning complex cloud challenges into elegant, automated solutions—from founding my own agency to architecting enterprise Kubernetes clusters for Africa's largest bank.",
+                    "socials": [
+                        {
+                            "type": "github",
+                            "url": "https://github.com/Bayurzx"
+                        },
+                        {
+                            "type": "linkedin",
+                            "url": "https://linkedin.com/in/adebayo-omolumo"
+                        },
+                        {
+                            "type": "twitter",
+                            "url": "https://x.com/AdebayoOmolumo"
+                        },
+                        {
+                            "type": "devpost",
+                            "url": "https://devpost.com/bayurzx"
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "stats",
+                "data": {
+                    "stats": [
+                        {
+                            "label": "Years Experience",
+                            "value": 8,
+                            "suffix": "+"
+                        },
+                        {
+                            "label": "Hackathons",
+                            "value": 15,
+                            "suffix": "+"
+                        },
+                        {
+                            "label": "Cloud Platforms",
+                            "value": 3
+                        },
+                        {
+                            "label": "Certifications",
+                            "value": 10,
+                            "suffix": "+"
+                        }
+                    ]
+                }
+            }
+        ],
+        "suggestions": [
+            "Tell me about your projects",
+            "What's your tech stack?",
+            "How did you get into tech?",
+            "Show me your certifications"
+        ]
+    }
+}

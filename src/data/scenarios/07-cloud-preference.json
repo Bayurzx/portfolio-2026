@@ -1,0 +1,116 @@
+{
+    "id": "cloud_07",
+    "name": "Cloud Preference",
+    "triggers": [
+        "which cloud",
+        "aws or azure",
+        "cloud preference",
+        "favorite cloud",
+        "aws vs gcp",
+        "best cloud"
+    ],
+    "keywords": [
+        "cloud",
+        "aws",
+        "azure",
+        "gcp",
+        "preference",
+        "favorite",
+        "best"
+    ],
+    "response": {
+        "text": "It's like asking a chef their favorite knife! AWS is the heavy-duty cleaver—powerful, has a tool for everything, but sometimes complex. GCP is the elegant chef's knife—incredibly sharp, amazing developer experience, especially for K8s and AI. Azure is the versatile utility knife, deeply integrated into the enterprise world. I'm certified in all three, so I choose the right tool for the job. That said, I have a soft spot for GCP's developer experience, especially with GKE!",
+        "voiceText": "It's like asking a chef their favorite knife! I'm certified in AWS, Azure, and GCP, so I choose the right tool for the job. Though I have a soft spot for GCP's developer experience.",
+        "animationStyle": "playful",
+        "cards": [
+            {
+                "type": "stats",
+                "data": {
+                    "title": "Cloud Certifications",
+                    "stats": [
+                        {
+                            "label": "AWS Certs",
+                            "value": 1
+                        },
+                        {
+                            "label": "Azure Certs",
+                            "value": 5
+                        },
+                        {
+                            "label": "GCP Certs",
+                            "value": 3
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "certs",
+                "data": {
+                    "title": "Cloud Certifications",
+                    "certs": [
+                        {
+                            "name": "Professional Cloud Architect",
+                            "issuer": "Google Cloud",
+                            "image": "/images/certs/GCP_Architect.jpg",
+                            "date": "2022",
+                            "url": "https://www.credly.com/badges/f2a46f23-17f7-4619-8db8-80ae2428167b"
+                        },
+                        {
+                            "name": "Professional Cloud Security Engineer",
+                            "issuer": "Google Cloud",
+                            "image": "/images/certs/professional-cloud-security-engineer-badge.png",
+                            "date": "2024",
+                            "url": "https://www.credly.com/badges/2d98b89f-49ce-40aa-8553-9ba02f718f96"
+                        },
+                        {
+                            "name": "Associate Cloud Engineer",
+                            "issuer": "Google Cloud",
+                            "image": "/images/certs/GCP_ACE.jpg",
+                            "date": "2021",
+                            "url": "https://www.credly.com/badges/bacc465e-2603-48ad-824a-94e86568b2d7"
+                        },
+                        {
+                            "name": "DevOps Engineer Expert",
+                            "issuer": "Microsoft Azure",
+                            "image": "/images/certs/AZ_400.jpg",
+                            "date": "2023",
+                            "url": "https://learn.microsoft.com/en-us/users/adebayoomolumo-0432/credentials/f0e5f4fccebae235"
+                        },
+                        {
+                            "name": "Azure AI Engineer",
+                            "issuer": "Microsoft Azure",
+                            "image": "/images/certs/AZ_102.png",
+                            "date": "2023",
+                            "url": "https://learn.microsoft.com/en-us/users/adebayoomolumo-0432/credentials/4c35bff015f21cc6"
+                        },
+                        {
+                            "name": "Azure Developer Associate",
+                            "issuer": "Microsoft Azure",
+                            "image": "/images/certs/AZ_204.jpg",
+                            "date": "2022",
+                            "url": "https://learn.microsoft.com/en-us/users/adebayoomolumo-0432/credentials/4b4aa757538b104c"
+                        },
+                        {
+                            "name": "Azure Administrator",
+                            "issuer": "Microsoft Azure",
+                            "image": "/images/certs/AZ_104.jpg",
+                            "date": "2022",
+                            "url": "https://learn.microsoft.com/en-us/users/adebayoomolumo-0432/credentials/2c1f5b2367c709e9"
+                        },
+                        {
+                            "name": "Azure Fundamentals",
+                            "issuer": "Microsoft Azure",
+                            "image": "/images/certs/AZ_900.jpg",
+                            "date": "2021"
+                        }
+                    ]
+                }
+            }
+        ],
+        "suggestions": [
+            "Show me all your certifications",
+            "Tell me about Kubernetes",
+            "What's your tech stack?"
+        ]
+    }
+}

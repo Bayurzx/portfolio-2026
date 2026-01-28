@@ -1,0 +1,48 @@
+{
+    "id": "resume_devops_27",
+    "name": "DevOps Resume",
+    "triggers": [
+        "devops resume",
+        "resume",
+        "cv",
+        "download resume"
+    ],
+    "keywords": [
+        "resume",
+        "cv",
+        "devops",
+        "download"
+    ],
+    "response": {
+        "text": "I have specialized resumes tailored for different roles! My DevOps Lead resume focuses on cloud infrastructure, Kubernetes, and CI/CD pipeline architecture. It highlights my work at Infometics/UBA and my certifications across AWS, Azure, and GCP. Download it below!",
+        "voiceText": "I have specialized resumes. My DevOps Lead resume focuses on cloud infrastructure, Kubernetes, and CI/CD pipelines.",
+        "animationStyle": "professional",
+        "cards": [
+            {
+                "type": "resume",
+                "data": {
+                    "title": "Available Resumes",
+                    "resumes": [
+                        {
+                            "name": "Full Stack & DevOps Resume",
+                            "description": "Full Stack & DevOps Engineer focus",
+                            "file": "/resumes/ADEBAYO CV (Full-stack) 2025.pdf",
+                            "type": "general"
+                        },
+                        {
+                            "name": "Comprehensive CV",
+                            "description": "Complete career history",
+                            "file": "/resumes/ADEBAYO CV 2025_10.pdf",
+                            "type": "cv"
+                        }
+                    ]
+                }
+            }
+        ],
+        "suggestions": [
+            "I want to hire you",
+            "What's your tech stack?",
+            "Show me your certifications"
+        ]
+    }
+}

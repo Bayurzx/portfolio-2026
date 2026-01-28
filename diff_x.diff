@@ -1,0 +1,383 @@
+diff --git a/frontend/src/app/page.tsx b/frontend/src/app/page.tsx
+index e127be6..45cb814 100644
+--- a/frontend/src/app/page.tsx
++++ b/frontend/src/app/page.tsx
+@@ -6,6 +6,8 @@ import { Header } from "@/components/layout/Header";
+ import { SuggestionChips } from "@/components/interview/SuggestionChips";
+ import { CardRenderer } from "@/components/interview/CardRenderer";
+ import { ChatWidget } from "@/components/chat/ChatWidget";
++import { BubbleQuestions } from "@/components/ui/BubbleQuestions";
++import "@/components/ui/BubbleQuestions.css";
+ import { matchScenario, getDefaultSuggestions } from "@/lib/scenarios";
+ import type { Scenario } from "@/lib/types";
+ 
+@@ -81,6 +83,12 @@ export default function Home() {
+     }
+   };
+ 
++  // Handle bubble click - load question into input box
++  const handleBubbleClick = useCallback((question: string) => {
++    setInputValue(question);
++    inputRef.current?.focus();
++  }, []);
++
+   return (
+     <div className="min-h-screen bg-[var(--bg-primary)]">
+       <Header />
+@@ -337,6 +345,9 @@ export default function Home() {
+         </div>
+       </main>
+ 
++      {/* Floating Bubble Questions */}
++      <BubbleQuestions onQuestionClick={handleBubbleClick} />
++
+       {/* Floating Chat Widget */}
+       <ChatWidget />
+     </div>
+diff --git a/frontend/src/components/ui/BubbleQuestions.css b/frontend/src/components/ui/BubbleQuestions.css
+new file mode 100644
+index 0000000..e85d6c2
+--- /dev/null
++++ b/frontend/src/components/ui/BubbleQuestions.css
+@@ -0,0 +1,165 @@
++/* Aquarium-style Bubble Animation */
++
++.aquarium-container {
++    position: fixed;
++    left: 1.5rem;
++    top: 0;
++    bottom: 0;
++    width: 170px;
++    z-index: 40;
++    overflow: hidden;
++    pointer-events: none;
++}
++
++/* Track that floats upward using CSS animation */
++.bubbles-track {
++    position: absolute;
++    bottom: -50px;
++    left: 0;
++    right: 0;
++    display: flex;
++    flex-direction: column;
++    align-items: flex-start;
++    gap: 1.25rem;
++    padding: 1rem 0.5rem;
++    pointer-events: auto;
++
++    /* CSS Animation for floating up */
++    animation: floatUp 18s linear infinite;
++}
++
++@keyframes floatUp {
++    0% {
++        transform: translateY(0);
++    }
++
++    100% {
++        transform: translateY(-600px);
++    }
++}
++
++/* PAUSE the animation on hover */
++.aquarium-container.paused .bubbles-track {
++    animation-play-state: paused;
++}
++
++.aquarium-bubble {
++    position: relative;
++    padding: 0.7rem 1rem;
++    border-radius: 18px;
++    border: 1px solid rgba(99, 102, 241, 0.35);
++    background: linear-gradient(135deg,
++            rgba(99, 102, 241, 0.12) 0%,
++            rgba(139, 92, 246, 0.08) 100%);
++    backdrop-filter: blur(10px);
++    cursor: pointer;
++    text-align: left;
++    max-width: 155px;
++    width: fit-content;
++    flex-shrink: 0;
++    transition: max-width 0.3s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
++    box-shadow:
++        0 4px 20px rgba(99, 102, 241, 0.12),
++        inset 0 1px 0 rgba(255, 255, 255, 0.15);
++}
++
++/* Bubble shine effect */
++.bubble-shine {
++    position: absolute;
++    top: 6px;
++    left: 12px;
++    width: 16px;
++    height: 10px;
++    background: linear-gradient(135deg,
++            rgba(255, 255, 255, 0.45) 0%,
++            transparent 100%);
++    border-radius: 50%;
++    pointer-events: none;
++}
++
++/* Short title - shown by default */
++.bubble-title {
++    display: block;
++    font-size: 0.75rem;
++    font-weight: 500;
++    color: var(--text-primary);
++    line-height: 1.3;
++    transition: all 0.25s ease;
++}
++
++/* Full question - hidden by default */
++.bubble-question {
++    display: none;
++    font-size: 0.72rem;
++    color: var(--text-secondary);
++    line-height: 1.4;
++    margin-top: 0.25rem;
++}
++
++/* Expanded state on hover */
++.aquarium-bubble.expanded {
++    max-width: 220px;
++    z-index: 100;
++    background: linear-gradient(135deg,
++            rgba(99, 102, 241, 0.2) 0%,
++            rgba(139, 92, 246, 0.14) 100%);
++    border-color: rgba(99, 102, 241, 0.55);
++    box-shadow:
++        0 8px 28px rgba(99, 102, 241, 0.2),
++        inset 0 1px 0 rgba(255, 255, 255, 0.25);
++}
++
++.aquarium-bubble.expanded .bubble-title {
++    font-size: 0.68rem;
++    color: var(--text-muted);
++    margin-bottom: 0.15rem;
++}
++
++.aquarium-bubble.expanded .bubble-question {
++    display: block;
++}
++
++.aquarium-bubble:hover {
++    border-color: rgba(99, 102, 241, 0.6);
++}
++
++/* Dark theme */
++[data-theme="dark"] .aquarium-bubble {
++    background: linear-gradient(135deg,
++            rgba(99, 102, 241, 0.16) 0%,
++            rgba(139, 92, 246, 0.1) 100%);
++}
++
++/* Light theme */
++[data-theme="light"] .aquarium-bubble {
++    background: linear-gradient(135deg,
++            rgba(99, 102, 241, 0.08) 0%,
++            rgba(139, 92, 246, 0.05) 100%);
++    border-color: rgba(99, 102, 241, 0.25);
++    box-shadow:
++        0 4px 15px rgba(99, 102, 241, 0.08),
++        inset 0 1px 0 rgba(255, 255, 255, 0.6);
++}
++
++/* Responsive */
++@media (max-width: 1024px) {
++    .aquarium-container {
++        display: none;
++    }
++}
++
++@media (max-width: 1280px) and (min-width: 1025px) {
++    .aquarium-container {
++        left: 0.75rem;
++        width: 145px;
++    }
++
++    .aquarium-bubble {
++        max-width: 130px;
++        padding: 0.55rem 0.8rem;
++    }
++
++    .bubble-question {
++        font-size: 0.68rem;
++    }
++}
+\ No newline at end of file
+diff --git a/frontend/src/components/ui/BubbleQuestions.tsx b/frontend/src/components/ui/BubbleQuestions.tsx
+new file mode 100644
+index 0000000..bbfba3d
+--- /dev/null
++++ b/frontend/src/components/ui/BubbleQuestions.tsx
+@@ -0,0 +1,106 @@
++"use client";
++
++import { motion, AnimatePresence } from "framer-motion";
++import { useState, useEffect, useCallback } from "react";
++import { getRandomQuestions, type BubbleQuestion } from "@/lib/scenarios";
++
++interface Bubble {
++    id: number;
++    title: string;
++    question: string;
++}
++
++interface BubbleQuestionsProps {
++    onQuestionClick: (question: string) => void;
++}
++
++let bubbleIdCounter = 0;
++
++export function BubbleQuestions({ onQuestionClick }: BubbleQuestionsProps) {
++    const [bubbles, setBubbles] = useState<Bubble[]>([]);
++    const [isPaused, setIsPaused] = useState(false);
++
++    // Create new bubbles
++    const createBubbles = useCallback(() => {
++        const questions = getRandomQuestions(3);
++        const newBubbles: Bubble[] = questions.map((q: BubbleQuestion) => ({
++            id: bubbleIdCounter++,
++            title: q.title,
++            question: q.question,
++        }));
++        setBubbles(newBubbles);
++    }, []);
++
++    // Initial load
++    useEffect(() => {
++        createBubbles();
++    }, [createBubbles]);
++
++    // Refresh bubbles every 20 seconds when not paused
++    useEffect(() => {
++        if (isPaused) return;
++
++        const interval = setInterval(() => {
++            createBubbles();
++        }, 20000);
++
++        return () => clearInterval(interval);
++    }, [isPaused, createBubbles]);
++
++    const handleBubbleClick = (bubble: Bubble) => {
++        setBubbles((prev) => prev.filter((b) => b.id !== bubble.id));
++        // Pass the FULL question to the input
++        onQuestionClick(bubble.question);
++
++        // Add replacement bubble
++        setTimeout(() => {
++            const [newQ] = getRandomQuestions(1);
++            setBubbles((prev) => [
++                ...prev,
++                {
++                    id: bubbleIdCounter++,
++                    title: newQ.title,
++                    question: newQ.question,
++                },
++            ]);
++        }, 800);
++    };
++
++    return (
++        <div
++            className={`aquarium-container ${isPaused ? "paused" : ""}`}
++            onMouseEnter={() => setIsPaused(true)}
++            onMouseLeave={() => setIsPaused(false)}
++        >
++            <div className="bubbles-track">
++                <AnimatePresence>
++                    {bubbles.map((bubble, index) => (
++                        <motion.button
++                            key={bubble.id}
++                            className="aquarium-bubble"
++                            title={bubble.question} // Show full question on native tooltip
++                            initial={{ opacity: 0, scale: 0.6 }}
++                            animate={{ opacity: 1, scale: 1 }}
++                            exit={{
++                                scale: [1, 1.4, 0],
++                                opacity: 0,
++                                transition: { duration: 0.25 }
++                            }}
++                            transition={{
++                                delay: index * 0.2,
++                                duration: 0.35,
++                            }}
++                            onClick={() => handleBubbleClick(bubble)}
++                            whileHover={{ scale: 1.08, x: 5 }}
++                            whileTap={{ scale: 0.92 }}
++                        >
++                            {/* Only show SHORT title in bubble */}
++                            <span className="bubble-title">{bubble.title}</span>
++                            <div className="bubble-shine" />
++                        </motion.button>
++                    ))}
++                </AnimatePresence>
++            </div>
++        </div>
++    );
++}
+diff --git a/frontend/src/lib/scenarios.ts b/frontend/src/lib/scenarios.ts
+index 959ac86..8b17867 100644
+--- a/frontend/src/lib/scenarios.ts
++++ b/frontend/src/lib/scenarios.ts
+@@ -163,3 +163,58 @@ export function getDefaultSuggestions(): string[] {
+         "I want to hire you",
+     ];
+ }
++
++/**
++ * Get random questions from all scenarios
++ * Returns objects with title (short display) and question (full question)
++ */
++export interface BubbleQuestion {
++    title: string;
++    question: string;
++}
++
++export function getRandomQuestions(count: number = 3): BubbleQuestion[] {
++    // Mapping of scenario names to proper full questions
++    const questionMap: Record<string, string> = {
++        "Introduction": "Who are you?",
++        "Origin Story": "How did you get into tech?",
++        "Current Role": "What's your current role?",
++        "Skills Overview": "What are your main skills?",
++        "Kubernetes": "Tell me about your Kubernetes experience",
++        "Terraform": "What's your experience with Terraform?",
++        "Cloud Preference": "Which cloud platform do you prefer?",
++        "Languages": "What programming languages do you use?",
++        "Best Project": "What's your best project?",
++        "DockerHelper": "Tell me about DockerHelper",
++        "SaveEarth": "Tell me about the SaveEarth project",
++        "Synapse": "What is Synapse?",
++        "Hackathon Projects": "What hackathon projects have you built?",
++        "GitHub": "Where can I find your GitHub?",
++        "Current Project": "What are you currently working on?",
++        "Work History": "Tell me about your work experience",
++        "Certifications": "What certifications do you have?",
++        "Hackathon Count": "How many hackathons have you done?",
++        "Awards": "What awards have you won?",
++        "Biggest Challenge": "What's your biggest challenge?",
++        "Why Hackathons": "Why do you do so many hackathons?",
++        "Stay Updated": "How do you stay updated with tech?",
++        "Motivation": "What motivates you?",
++        "Future Goals": "What are your future goals?",
++        "Contact": "How can I contact you?",
++        "Hire Me": "I want to hire you",
++        "Resume DevOps": "Show me your DevOps resume",
++        "Resume Fullstack": "Show me your fullstack resume",
++        "Fun Facts": "Tell me some fun facts about you",
++        "Easter Eggs": "Any hidden surprises?",
++    };
++
++    // Collect sample questions from all scenarios
++    const allQuestions: BubbleQuestion[] = scenarios.map((s) => ({
++        title: s.name,
++        question: questionMap[s.name] || `Tell me about ${s.name.toLowerCase()}`,
++    }));
++
++    // Shuffle and pick random ones
++    const shuffled = [...allQuestions].sort(() => Math.random() - 0.5);
++    return shuffled.slice(0, count);
++}

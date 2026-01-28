@@ -1,0 +1,60 @@
+{
+    "id": "work_history_16",
+    "name": "Work History",
+    "triggers": [
+        "work history",
+        "career history",
+        "experience",
+        "resume",
+        "past jobs"
+    ],
+    "keywords": [
+        "work",
+        "history",
+        "career",
+        "experience",
+        "jobs",
+        "resume"
+    ],
+    "response": {
+        "text": "My career has been a journey from curious coder to enterprise cloud architect! I started as a freelance frontend developer in 2017, founded Iglumtech in 2019 to help startups with full-stack and DevOps solutions, and now I'm at Infometics leading cloud infrastructure for UBA Group. Each step taught me something invaluable.",
+        "voiceText": "My career journey: freelance developer in 2017, founded Iglumtech in 2019, and now Senior Cloud DevOps Engineer at Infometics.",
+        "animationStyle": "professional",
+        "cards": [
+            {
+                "type": "timeline",
+                "data": {
+                    "title": "Career Timeline",
+                    "events": [
+                        {
+                            "year": "2024",
+                            "title": "Senior Cloud DevOps Engineer",
+                            "company": "Infometics",
+                            "description": "Architecting K8s clusters and secure CI/CD pipelines for UBA Group (Africa's largest bank). Leading enterprise cloud infrastructure.",
+                            "type": "work"
+                        },
+                        {
+                            "year": "2019",
+                            "title": "Founder & Lead Engineer",
+                            "company": "Iglumtech",
+                            "description": "Founded and grew a tech agency from web development to multi-cloud DevOps consulting. Served startups and SMBs including Credbolt (Vue.js fintech) and Moji's Cakes (e-commerce).",
+                            "type": "work"
+                        },
+                        {
+                            "year": "2017",
+                            "title": "Frontend Developer",
+                            "company": "Freelance",
+                            "description": "Built websites for university department and local businesses. First professional coding experience.",
+                            "type": "work"
+                        }
+                    ]
+                }
+            }
+        ],
+        "suggestions": [
+            "Tell me about Iglumtech",
+            "What's your current role?",
+            "I want to hire you"
+        ]
+    }
+}

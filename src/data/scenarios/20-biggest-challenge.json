@@ -1,0 +1,50 @@
+{
+    "id": "challenge_20",
+    "name": "Biggest Challenge",
+    "triggers": [
+        "biggest challenge",
+        "hardest problem",
+        "technical challenge",
+        "difficult project"
+    ],
+    "keywords": [
+        "challenge",
+        "hard",
+        "difficult",
+        "problem",
+        "tough"
+    ],
+    "response": {
+        "text": "My biggest technical challenge was at UBA Group—re-architecting legacy IBM workloads (ACE/MQ) to run on Kubernetes. These were stateful, complex applications never designed for containers. I had to design custom StatefulSets, implement persistent storage with Longhorn, set up air-gap simulation, and prove to enterprise stakeholders that their critical banking infrastructure could run in a cloud-native way. The eureka moment? When we achieved 99.9% uptime in production testing.",
+        "voiceText": "My biggest challenge was re-architecting legacy IBM banking applications to run on Kubernetes. Proving to enterprise stakeholders that their critical infrastructure could go cloud-native was incredibly rewarding.",
+        "animationStyle": "professional",
+        "cards": [
+            {
+                "type": "project",
+                "data": {
+                    "title": "IBM Workloads on Kubernetes",
+                    "description": "Re-architecting legacy stateful IBM applications (ACE/MQ) as Kubernetes StatefulSets in a secure, air-gapped environment for Africa's largest bank.",
+                    "techStack": [
+                        "Kubernetes",
+                        "IBM ACE",
+                        "IBM MQ",
+                        "StatefulSets",
+                        "Longhorn",
+                        "Velero"
+                    ],
+                    "achievements": [
+                        "99.9% uptime in production testing",
+                        "Proved cloud-native feasibility to enterprise stakeholders",
+                        "Custom disaster recovery with Velero"
+                    ],
+                    "featured": true
+                }
+            }
+        ],
+        "suggestions": [
+            "Tell me about Kubernetes",
+            "What's your current role?",
+            "Show me your certifications"
+        ]
+    }
+}

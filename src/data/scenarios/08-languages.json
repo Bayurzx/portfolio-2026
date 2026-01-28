@@ -1,0 +1,88 @@
+{
+    "id": "languages_08",
+    "name": "Programming Languages",
+    "triggers": [
+        "programming languages",
+        "what languages",
+        "coding languages",
+        "python",
+        "typescript",
+        "rust"
+    ],
+    "keywords": [
+        "languages",
+        "programming",
+        "code",
+        "coding",
+        "python",
+        "rust",
+        "typescript"
+    ],
+    "response": {
+        "text": "Python is my go-to for DevOps automation, scripting, and building APIs with FastAPI. TypeScript powers my full-stack work—I love the type safety and modern tooling. Rust is my passion project—I'm drawn to its performance and memory safety for CLI tools. And Bash? It's the duct tape that holds everything together in the DevOps world!",
+        "voiceText": "Python is my go-to for automation and APIs. TypeScript for full-stack work. Rust is my passion project for CLI tools. And Bash holds everything together!",
+        "animationStyle": "professional",
+        "cards": [
+            {
+                "type": "skills",
+                "data": {
+                    "title": "Programming Languages",
+                    "categories": [
+                        {
+                            "name": "Primary Languages",
+                            "skills": [
+                                {
+                                    "name": "Python",
+                                    "level": "advanced"
+                                },
+                                {
+                                    "name": "TypeScript",
+                                    "level": "advanced"
+                                },
+                                {
+                                    "name": "Bash",
+                                    "level": "advanced"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Learning & Growing",
+                            "skills": [
+                                {
+                                    "name": "Rust",
+                                    "level": "intermediate"
+                                },
+                                {
+                                    "name": "Go",
+                                    "level": "beginner"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Use Cases",
+                            "skills": [
+                                {
+                                    "name": "DevOps Automation (Python/Bash)"
+                                },
+                                {
+                                    "name": "Full-Stack Web (TypeScript)"
+                                },
+                                {
+                                    "name": "CLI Tools (Rust)"
+                                },
+                                {
+                                    "name": "APIs (FastAPI/Python)"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ],
+        "suggestions": [
+            "Tell me about your projects",
+            "What's your tech stack?",
+            "Tell me about DockerHelper"
+        ]
+    }
+}

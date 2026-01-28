@@ -1,0 +1,367 @@
+/* Improved Storybook Styles V2 */
+
+.story-container-v2 {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+/* Header */
+.story-header-v2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(15, 15, 26, 0.95);
+    cursor: default;
+}
+
+.back-btn {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.back-btn:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.story-title-v2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    background: linear-gradient(135deg, #6366f1, #ec4899);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.pause-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.pause-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #6366f1;
+}
+
+.pause-btn.paused {
+    background: rgba(99, 102, 241, 0.2);
+    border-color: #6366f1;
+}
+
+/* Progress Bar */
+.progress-track {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 99;
+}
+
+.progress-bar-v2 {
+    height: 100%;
+    background: linear-gradient(90deg, #6366f1, #ec4899);
+    transition: width 0.3s ease;
+}
+
+.countdown-bar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Timeline Navigation */
+.timeline-nav {
+    position: fixed;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    z-index: 50;
+    cursor: default;
+}
+
+.timeline-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.timeline-dot.completed {
+    border-color: rgba(99, 102, 241, 0.5);
+    background: rgba(99, 102, 241, 0.3);
+}
+
+.timeline-dot:hover,
+.timeline-dot.active {
+    border-color: var(--dot-color, #6366f1);
+    background: var(--dot-color, #6366f1);
+    transform: scale(1.2);
+}
+
+.timeline-year {
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.4);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.timeline-dot:hover .timeline-year,
+.timeline-dot.active .timeline-year {
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Main Content */
+.story-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 2rem 2rem;
+    min-height: 100vh;
+    cursor: default;
+}
+
+/* Story Card V2 - With Image */
+.story-card-v2 {
+    max-width: 800px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+}
+
+/* Chapter Image */
+.chapter-image {
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.story-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+/* Chapter Content */
+.chapter-content-v2 {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.year-badge {
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0.75rem;
+    width: fit-content;
+}
+
+.chapter-title-v2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 1.25rem 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.chapter-icon-inline {
+    font-size: 1.5rem;
+}
+
+/* Story Lines */
+.chapter-lines {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.story-line {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+    padding-left: 1rem;
+    border-left: 2px solid rgba(99, 102, 241, 0.3);
+}
+
+.chapter-indicator {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: auto;
+}
+
+/* Navigation Buttons */
+.story-nav-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    cursor: default;
+}
+
+.nav-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.nav-btn.prev {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.nav-btn.prev:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.nav-btn.prev:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.nav-btn.next {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    border: none;
+    color: white;
+}
+
+.nav-btn.next:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+}
+
+.nav-btn.cta {
+    background: linear-gradient(135deg, #ec4899, #8b5cf6);
+}
+
+/* Status */
+.story-status {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.paused-text {
+    color: #fbbf24;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .story-header-v2 {
+        padding: 1rem;
+    }
+
+    .timeline-nav {
+        right: 0.5rem;
+        gap: 1rem;
+    }
+
+    .timeline-dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    .timeline-year {
+        display: none;
+    }
+
+    .story-main {
+        padding: 5rem 1rem 1.5rem;
+    }
+
+    .story-card-v2 {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+
+    .chapter-image {
+        min-height: 200px;
+    }
+
+    .chapter-content-v2 {
+        padding: 1.5rem;
+    }
+
+    .chapter-title-v2 {
+        font-size: 1.25rem;
+    }
+
+    .story-line {
+        font-size: 0.9rem;
+    }
+
+    .story-nav-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-btn {
+        width: 100%;
+        text-align: center;
+    }
+}

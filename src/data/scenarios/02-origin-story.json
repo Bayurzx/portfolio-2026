@@ -1,0 +1,62 @@
+{
+    "id": "origin_02",
+    "name": "Origin Story",
+    "triggers": [
+        "how did you get into tech",
+        "your origin story",
+        "how you started",
+        "how did you start",
+        "your journey",
+        "background"
+    ],
+    "keywords": [
+        "origin",
+        "start",
+        "began",
+        "journey",
+        "story",
+        "background",
+        "how"
+    ],
+    "response": {
+        "text": "It started with curiosity and a broken website. I was studying engineering when my department needed a new site—I volunteered, taught myself to code, and got hooked. But I quickly realized I was more fascinated by the *how* than the *what*. How does code go from a laptop to serving millions? How do you keep systems alive at 3 AM? That obsession with deployment, scale, and reliability pulled me into the cloud. I haven't looked back since.",
+        "voiceText": "It started with curiosity and a broken website. I was studying engineering when my department needed a new site. I volunteered, taught myself to code, and got hooked. That obsession with deployment and scale pulled me into the cloud.",
+        "animationStyle": "professional",
+        "cards": [
+            {
+                "type": "timeline",
+                "data": {
+                    "title": "My Journey",
+                    "events": [
+                        {
+                            "year": "2017",
+                            "title": "Frontend Developer",
+                            "company": "Freelance",
+                            "description": "Built websites for university department and local businesses. First taste of web development.",
+                            "type": "work"
+                        },
+                        {
+                            "year": "2019",
+                            "title": "Founder & Lead Engineer",
+                            "company": "Iglumtech",
+                            "description": "Grew agency from web dev to multi-cloud DevOps consulting. Built solutions for startups and SMBs.",
+                            "type": "achievement"
+                        },
+                        {
+                            "year": "2024",
+                            "title": "Senior Cloud DevOps Engineer",
+                            "company": "Infometics",
+                            "description": "Working with key client UBA Group. Building K8s cluster in development environment for enterprise workloads.",
+                            "type": "work"
+                        }
+                    ]
+                }
+            }
+        ],
+        "suggestions": [
+            "Tell me about Iglumtech",
+            "What's your current role?",
+            "Show me your projects"
+        ]
+    }
+}

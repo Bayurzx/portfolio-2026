@@ -29,7 +29,7 @@ export default function Home() {
     onResult: (text) => {
       setInputValue(text);
       setVoiceError(null);
-      inputRef.current?.focus();
+      // Don't auto-focus - this was stealing focus from ChatWidget
     },
     onError: (err) => {
       console.error("Voice error:", err);
@@ -82,13 +82,19 @@ export default function Home() {
   // Global keyboard event handler
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      // Ignore if user is typing in the chat widget input
-      const target = e.target as HTMLElement;
-      if (target.closest('[data-chat-input]')) return;
-
       // Escape key - unfocus input
       if (e.key === "Escape") {
         inputRef.current?.blur();
+        return;
+      }
+
+      // Ignore if typing in an input, textarea, or content editable element
+      const target = e.target as HTMLElement;
+      if (
+        target.tagName === "INPUT" ||
+        target.tagName === "TEXTAREA" ||
+        target.isContentEditable
+      ) {
         return;
       }
 

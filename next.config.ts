@@ -1,16 +1,20 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Static export for hosting anywhere
-  output: "export",
+  // Standalone output for Docker deployment
+  output: "standalone",
 
-  // Disable image optimization for static export (Next.js Image requires server)
+  // Image optimization is allowed in standalone mode
   images: {
-    unoptimized: true,
+    unoptimized: false,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
   },
 
-  // Trailing slashes for better static hosting compatibility
-  trailingSlash: true,
 };
 
 export default nextConfig;
